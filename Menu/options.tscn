@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm271wxgpb38j"]
+
+[ext_resource type="Script" path="res://Options.gd" id="1_llcdu"]
+
+[node name="Options" type="Node2D"]
+script = ExtResource("1_llcdu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 350.0
+offset_top = 50.0
+offset_right = 801.0
+offset_bottom = 200.0
+text = "This contains all options available for the game. Blaa blaa.."
+
+[node name="Button" type="Button" parent="."]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 215.0
+offset_bottom = 115.0
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
