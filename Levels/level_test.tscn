@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2ml1j5vsyfue"]
+[gd_scene load_steps=6 format=3 uid="uid://b2ml1j5vsyfue"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_6yy86"]
 [ext_resource type="PackedScene" uid="uid://da1dotberd134" path="res://Player/player.tscn" id="2_b4pbg"]
+[ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="3_flkbm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
 texture = ExtResource("1_6yy86")
@@ -729,3 +730,14 @@ layer_0/tile_data = PackedInt32Array(1572872, 131072, 0, 1638408, 131072, 1, 170
 
 [node name="Player" parent="Player" instance=ExtResource("2_b4pbg")]
 position = Vector2(216, 360)
+
+[node name="Collectibles" type="Node2D" parent="."]
+
+[node name="Coin" parent="Collectibles" instance=ExtResource("3_flkbm")]
+position = Vector2(463, 373)
+
+[node name="Coin2" parent="Collectibles" instance=ExtResource("3_flkbm")]
+position = Vector2(681, 374)
+
+[node name="Coin3" parent="Collectibles" instance=ExtResource("3_flkbm")]
+position = Vector2(928, 309)
