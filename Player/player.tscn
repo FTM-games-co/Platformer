@@ -452,3 +452,5 @@ scale = Vector2(1e-05, 1e-05)
 zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = 0
+limit_bottom = 648
+editor_draw_limits = true

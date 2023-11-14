@@ -38,3 +38,7 @@ func _physics_process(delta):
 		anim.play("Fall")
 
 	move_and_slide()
+
+
+func _on_bot_bound_area_entered(area):
+	pass # Replace with function body.
