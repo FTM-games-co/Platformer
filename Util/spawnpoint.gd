@@ -2,9 +2,6 @@ extends Node2D
 
 var player = preload("res://Player/player.tscn")
 
-func _ready():
-	spawn_player()
-
 func spawn_player():
 	var playerTemp = player.instantiate()
 	print("global pos ", self.position)
@@ -13,5 +10,6 @@ func spawn_player():
 
 func _on_area_2d_body_exited(body):
 	if body.name == "Player":
+		spawn_player()
 		print("reload")
 		get_tree().reload_current_scene()
