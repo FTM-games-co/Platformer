@@ -748,7 +748,7 @@ position = Vector2(946, 325)
 
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("3_gk7tw")]
 
-[node name="Flags" type="Area2D" parent="."]
+[node name="Flags" type="Node2D" parent="."]
 
 [node name="Goal" parent="Flags" instance=ExtResource("4_bv0pr")]
 position = Vector2(1051, 354)
