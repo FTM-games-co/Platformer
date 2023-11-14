@@ -1,0 +1,74 @@
+[gd_scene load_steps=13 format=3 uid="uid://c3vsnpuwss30d"]
+
+[ext_resource type="Texture2D" uid="uid://chr3v3ip8r1wc" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 01.png" id="1_nbyt8"]
+[ext_resource type="Texture2D" uid="uid://cr3i5q6q885d4" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 02.png" id="2_qq0tm"]
+[ext_resource type="Texture2D" uid="uid://be5xfhhnkieux" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 03.png" id="3_xalpy"]
+[ext_resource type="Texture2D" uid="uid://nxixmx03wnai" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 04.png" id="4_f6gv1"]
+[ext_resource type="Texture2D" uid="uid://cei5o0h1y21b" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 05.png" id="5_v7m51"]
+[ext_resource type="Texture2D" uid="uid://wwc45fsauspq" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 06.png" id="6_dre7a"]
+[ext_resource type="Texture2D" uid="uid://dv04rpc8emjdx" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 07.png" id="7_jpnep"]
+[ext_resource type="Texture2D" uid="uid://dlfn41y5ww0tq" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 08.png" id="8_nbrem"]
+[ext_resource type="Texture2D" uid="uid://b72lfns5wvx0i" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Flag 09.png" id="9_g3xug"]
+
+[sub_resource type="GDScript" id="GDScript_jq2wi"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fyt6"]
+size = Vector2(42, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t7dy2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nbyt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qq0tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xalpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f6gv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_v7m51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dre7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jpnep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nbrem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g3xug")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Goal" type="Area2D"]
+script = SubResource("GDScript_jq2wi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_5fyt6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t7dy2")
+autoplay = "default"
