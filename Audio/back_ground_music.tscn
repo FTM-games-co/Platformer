@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://7brs03m2jxh6"]
+
+[ext_resource type="AudioStream" uid="uid://doa03u6n7y3t2" path="res://Audio/musa.mp3" id="1_v2rpu"]
+[ext_resource type="Script" path="res://Audio/BackGroundMusic.gd" id="2_tp1oc"]
+
+[node name="BackGroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_v2rpu")
+volume_db = -7.0
+autoplay = true
+script = ExtResource("2_tp1oc")

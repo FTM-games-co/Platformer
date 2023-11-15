@@ -15,6 +15,10 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+BackGroundMusic="*res://Audio/back_ground_music.tscn"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
