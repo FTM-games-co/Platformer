@@ -438,6 +438,7 @@ shape = SubResource("RectangleShape2D_pwxrl")
 sprite_frames = SubResource("SpriteFrames_3o4jo")
 animation = &"Dead"
 autoplay = "Idle"
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")

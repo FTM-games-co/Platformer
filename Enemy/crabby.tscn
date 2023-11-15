@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bue3sl7buf7rn"]
+[gd_scene load_steps=36 format=3 uid="uid://bue3sl7buf7rn"]
 
 [ext_resource type="Script" path="res://Enemy/crabby.gd" id="1_2e8aw"]
 [ext_resource type="Texture2D" uid="uid://duy278ob25s6o" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 01.png" id="2_dnpjx"]
@@ -10,11 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://b21jjio3ynv56" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 04.png" id="5_733xe"]
 [ext_resource type="Texture2D" uid="uid://bpqlvlmmj6qgs" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 04.png" id="5_n8a43"]
 [ext_resource type="Texture2D" uid="uid://20w3m6sktbpt" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 05.png" id="6_70js6"]
+[ext_resource type="Texture2D" uid="uid://duo4c1d7my7na" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 01.png" id="6_fm5d7"]
 [ext_resource type="Texture2D" uid="uid://bf1gqsfbgj43m" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 01.png" id="6_hpwgd"]
 [ext_resource type="Texture2D" uid="uid://kdxn0yymj4d3" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 02.png" id="7_m86o4"]
 [ext_resource type="Texture2D" uid="uid://mwt71f87tfah" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 06.png" id="7_oaesp"]
+[ext_resource type="Texture2D" uid="uid://ct6uwh63e72h3" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 02.png" id="7_rlgnh"]
 [ext_resource type="Texture2D" uid="uid://brwccfpr8qngn" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 07.png" id="8_gbd37"]
+[ext_resource type="Texture2D" uid="uid://cgwqbpj5212hg" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 03.png" id="8_sjg7w"]
 [ext_resource type="Texture2D" uid="uid://71ky2q3ddnv0" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 03.png" id="8_vnipc"]
+[ext_resource type="Texture2D" uid="uid://obi6nag12jeh" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 04.png" id="9_evmc0"]
 [ext_resource type="Texture2D" uid="uid://c8vsnnltljeeo" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 08.png" id="9_q32tu"]
 [ext_resource type="Texture2D" uid="uid://cx7s1c8ep5mxc" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 04.png" id="9_xn163"]
 [ext_resource type="Texture2D" uid="uid://3513pdy7d5v2" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 09.png" id="10_owhfk"]
@@ -47,6 +51,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fm5d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rlgnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sjg7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_evmc0")
+}],
+"loop": false,
+"name": &"Death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -139,6 +160,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_f4vpo"]
 radius = 76.0066
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2qi7"]
+size = Vector2(14, 23)
+
 [node name="Crabby" type="CharacterBody2D"]
 script = ExtResource("1_2e8aw")
 
@@ -147,14 +171,21 @@ shape = SubResource("RectangleShape2D_rc0wf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bp35m")
-animation = &"Run"
+animation = &"Jump"
 autoplay = "Idle"
-frame_progress = 0.318439
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_f4vpo")
+
+[node name="PlayerDeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_h2qi7")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
