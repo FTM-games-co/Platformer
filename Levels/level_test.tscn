@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2ml1j5vsyfue"]
+[gd_scene load_steps=11 format=3 uid="uid://b2ml1j5vsyfue"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_6yy86"]
 [ext_resource type="PackedScene" uid="uid://cvlrkqf0a28dd" path="res://Util/spawnpoint.tscn" id="2_h4pc0"]
+[ext_resource type="PackedScene" uid="uid://da1dotberd134" path="res://Player/player.tscn" id="3_1aot5"]
 [ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="3_flkbm"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="3_gk7tw"]
 [ext_resource type="PackedScene" uid="uid://c3vsnpuwss30d" path="res://Collectibles/goal.tscn" id="5_jufp7"]
+[ext_resource type="PackedScene" uid="uid://bue3sl7buf7rn" path="res://Enemy/crabby.tscn" id="6_uyb60"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
 texture = ExtResource("1_6yy86")
@@ -736,6 +738,9 @@ layer_0/tile_data = PackedInt32Array(-65544, 131072, 2, -8, 131072, 2, 65528, 13
 [node name="Spawnpoint" parent="Player" instance=ExtResource("2_h4pc0")]
 position = Vector2(224, 392)
 
+[node name="Player" parent="Player" instance=ExtResource("3_1aot5")]
+position = Vector2(198, 387)
+
 [node name="Collectibles" type="Node2D" parent="."]
 
 [node name="Coin" parent="Collectibles" instance=ExtResource("3_flkbm")]
@@ -764,5 +769,10 @@ shape = SubResource("RectangleShape2D_qqjii")
 
 [node name="Goal" parent="Flags" instance=ExtResource("5_jufp7")]
 position = Vector2(1048, 354)
+
+[node name="Enemy" type="Node2D" parent="."]
+
+[node name="Crabby" parent="Enemy" instance=ExtResource("6_uyb60")]
+position = Vector2(802, 355)
 
 [connection signal="body_exited" from="Boundaries/Area2D" to="Player/Spawnpoint" method="_on_area_2d_body_exited"]
