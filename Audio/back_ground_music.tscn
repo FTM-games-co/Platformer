@@ -5,6 +5,6 @@
 
 [node name="BackGroundMusic" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_v2rpu")
-volume_db = -10.0
+volume_db = -12.0
 autoplay = true
 script = ExtResource("2_tp1oc")
