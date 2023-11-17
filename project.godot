@@ -21,6 +21,8 @@ BackGroundMusic="*res://Audio/back_ground_music.tscn"
 CoinEffect="*res://Audio/coin_effect.tscn"
 JumpEffect="*res://Audio/jump_effect.tscn"
 ClickEffect="*res://Audio/click_effect.tscn"
+Game="*res://Util/Global/Game.gd"
+Saveload="*res://Util/Global/Saveload.gd"
 
 [rendering]
 

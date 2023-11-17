@@ -10,6 +10,7 @@ func spawn_player():
 
 func _on_area_2d_body_exited(body):
 	if body.name == "Player":
+		Game.playerHealth -= 1
 		spawn_player()
 		print("reload")
 		get_tree().reload_current_scene()

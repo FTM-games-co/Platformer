@@ -3,6 +3,10 @@ extends Node2D
 var backgroundmusic = BackGroundMusic
 var clickeffect = ClickEffect
 
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Levels/level_test.tscn")
 	clickeffect.play()
