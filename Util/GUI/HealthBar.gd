@@ -1,4 +1,4 @@
 extends TextureProgressBar
 
-func _ready():
-	pass
+func _process(delta):
+	value = Game.playerHealth
