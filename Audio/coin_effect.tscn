@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0m4mx5ih7itj"]
+
+[ext_resource type="AudioStream" uid="uid://bq5kx6a8ur8xv" path="res://Audio/kolikko.mp3" id="1_l1y6m"]
+[ext_resource type="Script" path="res://Audio/coin_effect.gd" id="2_ylytq"]
+
+[node name="CoinEffect" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_l1y6m")
+volume_db = -12.0
+pitch_scale = 0.76
+script = ExtResource("2_ylytq")

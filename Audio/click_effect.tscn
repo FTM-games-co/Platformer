@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb5ig2piktm3c"]
+
+[ext_resource type="AudioStream" uid="uid://dho2hc50e2cmo" path="res://Audio/klikki.mp3" id="1_ax0lm"]
+[ext_resource type="Script" path="res://Audio/click_effect.gd" id="2_u0273"]
+
+[node name="ClickEffect" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_ax0lm")
+volume_db = -15.0
+script = ExtResource("2_u0273")

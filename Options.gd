@@ -1,4 +1,5 @@
 extends Node2D
+var clickeffect = ClickEffect
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,3 +11,4 @@ func _process(delta):
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
+	clickeffect.play()
