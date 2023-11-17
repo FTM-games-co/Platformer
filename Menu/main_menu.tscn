@@ -34,6 +34,16 @@ text = "Quit"
 
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("2_hwkx0")]
 
+[node name="Music" type="CheckButton" parent="."]
+modulate = Color(0.137255, 0.517647, 1, 1)
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 172.0
+offset_bottom = 48.0
+button_pressed = true
+text = "Music ON/OFF"
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="toggled" from="Music" to="." method="_on_music_toggled"]
