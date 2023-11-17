@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqwyso1nrno4"]
+
+[ext_resource type="Texture2D" uid="uid://cqrfetkcul6ik" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Paper/10.png" id="1_uglen"]
+[ext_resource type="Texture2D" uid="uid://b0sd5e4hxmku7" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Paper/11.png" id="2_0gmwt"]
+[ext_resource type="Texture2D" uid="uid://bd0orhewr5xu5" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Paper/12.png" id="3_yva3w"]
+[ext_resource type="FontFile" uid="uid://bw63qkekcs8jy" path="res://Assets/Font/NotJamOldStyle14.ttf" id="4_pfgc8"]
+[ext_resource type="Script" path="res://Util/GUI/Gold.gd" id="5_hcchs"]
+
+[node name="Coincount" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_uglen")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 80.0
+offset_bottom = 40.0
+texture = ExtResource("2_0gmwt")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 120.0
+offset_bottom = 40.0
+texture = ExtResource("3_yva3w")
+
+[node name="Gold" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 12.0
+offset_right = 107.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_pfgc8")
+theme_override_font_sizes/font_size = 14
+script = ExtResource("5_hcchs")
