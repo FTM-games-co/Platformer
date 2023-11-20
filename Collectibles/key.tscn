@@ -1,0 +1,168 @@
+[gd_scene load_steps=20 format=3 uid="uid://bc4o2bnrw8yym"]
+
+[ext_resource type="Script" path="res://Collectibles/key.gd" id="1_gixky"]
+[ext_resource type="Texture2D" uid="uid://cxmvsk6ljahgl" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Effect/1.png" id="1_tvupj"]
+[ext_resource type="Texture2D" uid="uid://8c8q4o3kf5l2" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Effect/2.png" id="2_y0kml"]
+[ext_resource type="Texture2D" uid="uid://bqrma1grsoehw" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Effect/3.png" id="3_emr15"]
+[ext_resource type="Texture2D" uid="uid://bp6wv423ixg4o" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Effect/4.png" id="4_5l6t2"]
+[ext_resource type="Texture2D" uid="uid://dqv13d3phhb6l" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Idle/1.png" id="5_o6gmm"]
+[ext_resource type="Texture2D" uid="uid://bbsd7j6lqgmqu" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Idle/2.png" id="6_vy3q4"]
+[ext_resource type="Texture2D" uid="uid://c8mnf3g2bv8we" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Idle/3.png" id="7_5bik0"]
+[ext_resource type="Texture2D" uid="uid://uhp500mpgqp6" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Idle/4.png" id="8_vd7kj"]
+[ext_resource type="Texture2D" uid="uid://de5xggqbbxqcw" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Idle/5.png" id="9_w5xfa"]
+[ext_resource type="Texture2D" uid="uid://cuf3oxuemy2mv" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Idle/6.png" id="10_ewcnj"]
+[ext_resource type="Texture2D" uid="uid://bijdd1t4mwblc" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Idle/7.png" id="11_g7pw1"]
+[ext_resource type="Texture2D" uid="uid://pnh1c5g4s2rl" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Chest Key/Idle/8.png" id="12_mls31"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_00jvl"]
+radius = 14.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dat3g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tvupj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y0kml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_emr15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5l6t2")
+}],
+"loop": true,
+"name": &"Effect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_o6gmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vy3q4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5bik0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vd7kj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w5xfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ewcnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g7pw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mls31")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_s4w4b"]
+resource_name = "Idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_1nq6a"]
+resource_name = "Effect"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Effect"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_pksvq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sfnlm"]
+_data = {
+"Effect": SubResource("Animation_1nq6a"),
+"Idle": SubResource("Animation_s4w4b"),
+"RESET": SubResource("Animation_pksvq")
+}
+
+[node name="Key" type="Area2D"]
+script = ExtResource("1_gixky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_00jvl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_dat3g")
+animation = &"Idle"
+autoplay = "Idle"
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
+autoplay = "Idle"
+libraries = {
+"": SubResource("AnimationLibrary_sfnlm")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
