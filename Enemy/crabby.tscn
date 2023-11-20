@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bue3sl7buf7rn"]
+[gd_scene load_steps=37 format=3 uid="uid://bue3sl7buf7rn"]
 
 [ext_resource type="Script" path="res://Enemy/crabby.gd" id="1_2e8aw"]
 [ext_resource type="Texture2D" uid="uid://duy278ob25s6o" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 01.png" id="2_dnpjx"]
@@ -163,6 +163,9 @@ radius = 76.0066
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2qi7"]
 size = Vector2(14, 23)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cw4fq"]
+size = Vector2(72, 12)
+
 [node name="Crabby" type="CharacterBody2D"]
 script = ExtResource("1_2e8aw")
 
@@ -171,7 +174,7 @@ shape = SubResource("RectangleShape2D_rc0wf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bp35m")
-animation = &"Jump"
+animation = &"Attack"
 autoplay = "Idle"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
@@ -186,6 +189,13 @@ shape = SubResource("CircleShape2D_f4vpo")
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_h2qi7")
 
+[node name="PlayerAttack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAttack"]
+position = Vector2(2, 5)
+shape = SubResource("RectangleShape2D_cw4fq")
+
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
 [connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
+[connection signal="body_entered" from="PlayerAttack" to="." method="_on_player_attack_body_entered"]
