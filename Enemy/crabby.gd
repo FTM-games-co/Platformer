@@ -11,7 +11,7 @@ func _ready():
 func _physics_process(delta):
 	# Gravity for the crabby
 	velocity.y += gravity * delta
-
+	
 	match state:
 		"chase":
 			if get_node("AnimatedSprite2D").animation != "Death":
@@ -29,7 +29,7 @@ func _physics_process(delta):
 				get_node("AnimatedSprite2D").play("Idle")
 			velocity.x = 0
 
-		"attacked":
+		"attack":
 			if get_node("AnimatedSprite2D").animation != "Death":
 				get_node("AnimatedSprite2D").play("Attack")
 
@@ -57,5 +57,5 @@ func _on_player_death_body_entered(body):
 
 func _on_player_attack_body_entered(body):
 	if body.name == "Player":
-		state = "attacked"
+		state = "attack"
 		Game.playerHealth -= 1

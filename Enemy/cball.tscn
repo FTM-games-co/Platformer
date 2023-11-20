@@ -1,0 +1,69 @@
+[gd_scene load_steps=12 format=3 uid="uid://0c7ux4r04dv5"]
+
+[ext_resource type="Script" path="res://Enemy/cball.gd" id="1_wrvks"]
+[ext_resource type="Texture2D" uid="uid://bdv1mhuawwada" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Explosion/1.png" id="2_oj4g0"]
+[ext_resource type="Texture2D" uid="uid://csfj2hs7vsrep" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Explosion/2.png" id="3_h5i8w"]
+[ext_resource type="Texture2D" uid="uid://bo5maono5rrj5" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Explosion/3.png" id="4_edyio"]
+[ext_resource type="Texture2D" uid="uid://5r8mss6u883m" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Explosion/4.png" id="5_oga2i"]
+[ext_resource type="Texture2D" uid="uid://bf3345yjiuljx" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Explosion/5.png" id="6_t1iin"]
+[ext_resource type="Texture2D" uid="uid://wqdm85k8vv1" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Explosion/6.png" id="7_jiq3a"]
+[ext_resource type="Texture2D" uid="uid://cd2vgmd00vnvw" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Explosion/7.png" id="8_y3enc"]
+[ext_resource type="Texture2D" uid="uid://cm6gt424fx8kj" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Idle/1.png" id="9_jes2x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vxiuk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oj4g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h5i8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_edyio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oga2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t1iin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jiq3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y3enc")
+}],
+"loop": true,
+"name": &"Explosion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_jes2x")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mt5nj"]
+
+[node name="Cball" type="Area2D"]
+script = ExtResource("1_wrvks")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vxiuk")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.0997029
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mt5nj")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(18, 0)
+scale = Vector2(0.325, 0.9)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
