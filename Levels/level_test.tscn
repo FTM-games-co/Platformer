@@ -757,6 +757,9 @@ position = Vector2(192, 384)
 [node name="Chest2" parent="Collectibles" instance=ExtResource("11_j5a5r")]
 position = Vector2(520, 384)
 
+[node name="Key2" parent="Collectibles" instance=ExtResource("10_aw8ye")]
+position = Vector2(192, 320)
+
 [node name="Player" type="Node2D" parent="."]
 
 [node name="Spawnpoint" parent="Player" instance=ExtResource("2_h4pc0")]
