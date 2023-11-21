@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bto0mp1so45h7"]
+
+[ext_resource type="Script" path="res://Menu/deathscreen.gd" id="1_k6of6"]
+
+[node name="DeathScreen" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.956863, 0.952941, 1, 1)
+offset_left = 393.0
+offset_top = 180.0
+offset_right = 750.0
+offset_bottom = 296.0
+text = "Game Over! 💀
+Try again?"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_k6of6")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 377.0
+offset_top = 306.0
+offset_right = 538.0
+offset_bottom = 375.0
+text = "Play Again"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 608.0
+offset_top = 306.0
+offset_right = 768.0
+offset_bottom = 375.0
+text = "Back To Main Menu"
+
+[connection signal="pressed" from="Button" to="Label" method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="Label" method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="Label" method="_on_button_2_pressed"]

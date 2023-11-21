@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://cm271wxgpb38j"]
 
-[ext_resource type="Script" path="res://Options.gd" id="1_llcdu"]
+[ext_resource type="Script" path="res://Menu/Options.gd" id="1_ila0t"]
 
 [node name="Options" type="Node2D"]
-script = ExtResource("1_llcdu")
+script = ExtResource("1_ila0t")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 350.0
