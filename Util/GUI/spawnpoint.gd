@@ -1,6 +1,7 @@
 extends Node2D
 
 var player = preload("res://Player/player.tscn")
+var deatheffect = DeathEffect
 
 func spawn_player():
 	var playerTemp = player.instantiate()
@@ -14,3 +15,5 @@ func _on_area_2d_body_exited(body):
 		spawn_player()
 		print("reload")
 		get_tree().reload_current_scene()
+		if Game.playerHealth == 0:
+			get_tree().change_scene_to_file("res://Menu/death_screen.tscn")

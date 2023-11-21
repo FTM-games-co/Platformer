@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://b2ml1j5vsyfue"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_6yy86"]
-[ext_resource type="PackedScene" uid="uid://cvlrkqf0a28dd" path="res://Util/spawnpoint.tscn" id="2_h4pc0"]
+[ext_resource type="PackedScene" uid="uid://cvlrkqf0a28dd" path="res://Util/GUI/spawnpoint.tscn" id="2_h4pc0"]
 [ext_resource type="PackedScene" uid="uid://da1dotberd134" path="res://Player/player.tscn" id="3_1aot5"]
 [ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="3_flkbm"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="3_gk7tw"]
