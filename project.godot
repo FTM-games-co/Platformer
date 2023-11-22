@@ -23,7 +23,7 @@ JumpEffect="*res://Audio/jump_effect.tscn"
 ClickEffect="*res://Audio/click_effect.tscn"
 Game="*res://Util/Global/Game.gd"
 Saveload="*res://Util/Global/Saveload.gd"
-DeathEffect="*res://Audio/death_effect.tscn"
+DeathMusic="*res://Audio/death_music.tscn"
 
 [rendering]
 
