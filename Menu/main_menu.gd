@@ -2,6 +2,7 @@ extends Node2D
 
 var backgroundmusic = BackGroundMusic
 var clickeffect = ClickEffect
+var deathmusic = DeathMusic
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,3 +25,4 @@ func _on_music_toggled(button_pressed):
 		backgroundmusic.play()
 	else:
 		backgroundmusic.stop()
+		deathmusic.stop()

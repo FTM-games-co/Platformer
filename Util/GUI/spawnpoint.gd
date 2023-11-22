@@ -1,7 +1,6 @@
 extends Node2D
 
 var player = preload("res://Player/player.tscn")
-var deatheffect = DeathEffect
 
 func spawn_player():
 	var playerTemp = player.instantiate()
