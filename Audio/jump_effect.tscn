@@ -6,4 +6,5 @@
 [node name="JumpEffect" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_k5jhw")
 volume_db = -12.0
+bus = &"SFX"
 script = ExtResource("2_xg6m4")

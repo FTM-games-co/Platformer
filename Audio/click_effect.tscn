@@ -6,4 +6,5 @@
 [node name="ClickEffect" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_ax0lm")
 volume_db = -15.0
+bus = &"SFX"
 script = ExtResource("2_u0273")
