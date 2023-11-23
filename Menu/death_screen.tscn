@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Menu/deathscreen.gd" id="1_k6of6"]
 
 [node name="DeathScreen" type="Node2D"]
-modulate = Color(0.980392, 0.184314, 0.172549, 1)
+modulate = Color(0.67451, 0.862745, 0.972549, 1)
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0.956863, 0.952941, 1, 1)
@@ -11,7 +11,8 @@ offset_left = 393.0
 offset_top = 180.0
 offset_right = 750.0
 offset_bottom = 296.0
-text = "Game Over! 💀
+theme_override_font_sizes/font_size = 23
+text = "Game Over 💀
 Try again?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -22,6 +23,7 @@ offset_left = 377.0
 offset_top = 306.0
 offset_right = 538.0
 offset_bottom = 375.0
+theme_override_font_sizes/font_size = 20
 text = "Play Again"
 
 [node name="Button2" type="Button" parent="."]
@@ -29,6 +31,7 @@ offset_left = 607.0
 offset_top = 306.0
 offset_right = 768.0
 offset_bottom = 375.0
+theme_override_font_sizes/font_size = 20
 text = "Main Menu"
 
 [connection signal="pressed" from="Button" to="Label" method="_on_button_pressed"]
