@@ -7,4 +7,5 @@
 stream = ExtResource("1_v2rpu")
 volume_db = -15.0
 autoplay = true
+bus = &"MUSIC"
 script = ExtResource("2_tp1oc")
