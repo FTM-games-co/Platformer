@@ -211,47 +211,77 @@ offset_bottom = 768.0
 texture = ExtResource("10_b1vb1")
 
 [node name="LevelIcon" parent="." node_paths=PackedStringArray("next_level_right") instance=ExtResource("1_6d3ir")]
-offset_left = 96.0
-offset_top = 128.0
-offset_right = 160.0
-offset_bottom = 192.0
+offset_left = 152.0
+offset_top = 120.0
+offset_right = 216.0
+offset_bottom = 184.0
 next_scene_path = "res://Levels/level_test.tscn"
 next_level_right = NodePath("../LevelIcon2")
 
 [node name="LevelIcon2" parent="." node_paths=PackedStringArray("next_level_left", "next_level_right") instance=ExtResource("1_6d3ir")]
-offset_left = 400.0
+offset_left = 392.0
 offset_top = 104.0
-offset_right = 464.0
+offset_right = 456.0
 offset_bottom = 168.0
 level_name = "2"
 next_level_left = NodePath("../LevelIcon")
 next_level_right = NodePath("../LevelIcon3")
 
 [node name="LevelIcon3" parent="." node_paths=PackedStringArray("next_level_left", "next_level_right") instance=ExtResource("1_6d3ir")]
-offset_left = 704.0
-offset_top = 128.0
-offset_right = 768.0
-offset_bottom = 192.0
+offset_left = 688.0
+offset_top = 112.0
+offset_right = 752.0
+offset_bottom = 176.0
 level_name = "3"
 next_level_left = NodePath("../LevelIcon2")
 next_level_right = NodePath("../LevelIcon4")
 
-[node name="LevelIcon4" parent="." node_paths=PackedStringArray("next_level_left") instance=ExtResource("1_6d3ir")]
+[node name="LevelIcon4" parent="." node_paths=PackedStringArray("next_level_down", "next_level_left") instance=ExtResource("1_6d3ir")]
 offset_left = 992.0
 offset_top = 104.0
 offset_right = 1056.0
 offset_bottom = 168.0
 level_name = "4"
+next_level_down = NodePath("../LevelIcon5")
 next_level_left = NodePath("../LevelIcon3")
 
-[node name="PlayerIcon" parent="." instance=ExtResource("3_f6sg4")]
-layout_mode = 0
-offset_left = -32.0
-offset_top = 0.0
-offset_right = 32.0
-offset_bottom = 64.0
-pivot_offset = Vector2(32, 32)
-expand_mode = 0
-stretch_mode = 6
+[node name="LevelIcon5" parent="." node_paths=PackedStringArray("next_level_up", "next_level_left") instance=ExtResource("1_6d3ir")]
+offset_left = 992.0
+offset_top = 200.0
+offset_right = 1056.0
+offset_bottom = 264.0
+level_name = "5"
+next_level_up = NodePath("../LevelIcon4")
+next_level_left = NodePath("../LevelIcon6")
+
+[node name="LevelIcon6" parent="." node_paths=PackedStringArray("next_level_left", "next_level_right") instance=ExtResource("1_6d3ir")]
+offset_left = 784.0
+offset_top = 232.0
+offset_right = 848.0
+offset_bottom = 296.0
+level_name = "6"
+next_level_left = NodePath("../LevelIcon7")
+next_level_right = NodePath("../LevelIcon5")
+
+[node name="LevelIcon7" parent="." node_paths=PackedStringArray("next_level_left", "next_level_right") instance=ExtResource("1_6d3ir")]
+offset_left = 480.0
+offset_top = 232.0
+offset_right = 544.0
+offset_bottom = 296.0
+level_name = "7"
+next_level_left = NodePath("../LevelIcon8")
+next_level_right = NodePath("../LevelIcon6")
+
+[node name="LevelIcon8" parent="." node_paths=PackedStringArray("next_level_right") instance=ExtResource("1_6d3ir")]
+offset_left = 216.0
+offset_top = 224.0
+offset_right = 280.0
+offset_bottom = 288.0
+level_name = "8"
+next_level_right = NodePath("../LevelIcon7")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("4_lu7ca")]
+
+[node name="PlayerIcon" parent="." instance=ExtResource("3_f6sg4")]
+layout_mode = 1
+metadata/_edit_lock_ = true

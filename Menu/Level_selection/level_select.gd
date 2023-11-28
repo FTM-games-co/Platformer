@@ -33,4 +33,4 @@ func _input(event):
 			
 func tween_icon():
 	move_tween = get_tree().create_tween()
-	move_tween.tween_property($PlayerIcon, "global_position", current_level.global_position, 0.5).set_trans(Tween.TRANS_SINE)
+	move_tween.tween_property($PlayerIcon, "global_position", current_level.global_position, 0.6).set_trans(Tween.TRANS_SINE)
