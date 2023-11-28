@@ -21,7 +21,7 @@ offset_bottom = 115.0
 text = "Back To Main Menu"
 
 [node name="Label2" type="Label" parent="."]
-modulate = Color(0.964706, 0.686275, 0.92549, 1)
+modulate = Color(0.741176, 0.188235, 0.396078, 1)
 offset_left = 350.0
 offset_top = 92.0
 offset_right = 801.0
@@ -31,7 +31,7 @@ text = "MOVING = ➡️⬇️⬆️⬅️
 JUMPING = SPACEBAR"
 
 [node name="Label3" type="Label" parent="."]
-modulate = Color(0.478431, 0.847059, 1, 1)
+modulate = Color(0.137255, 0.568627, 1, 1)
 offset_left = 21.0
 offset_top = 154.0
 offset_right = 472.0
@@ -40,6 +40,7 @@ theme_override_font_sizes/font_size = 21
 text = "MASTER 🔈"
 
 [node name="MASTER" parent="." instance=ExtResource("2_7ux3e")]
+modulate = Color(0, 0, 0, 0.705882)
 offset_left = 21.0
 offset_top = 177.0
 offset_right = 289.0
@@ -47,7 +48,7 @@ offset_bottom = 224.0
 bus_name = "Master"
 
 [node name="Label4" type="Label" parent="."]
-modulate = Color(0.478431, 0.847059, 1, 1)
+modulate = Color(0.137255, 0.568627, 1, 1)
 offset_left = 22.0
 offset_top = 247.0
 offset_right = 473.0
@@ -56,6 +57,7 @@ theme_override_font_sizes/font_size = 21
 text = "SFX 🔈"
 
 [node name="SFX" parent="." instance=ExtResource("2_7ux3e")]
+modulate = Color(0, 0, 0, 0.705882)
 offset_left = 20.0
 offset_top = 271.0
 offset_right = 288.0
@@ -63,7 +65,7 @@ offset_bottom = 318.0
 bus_name = "SFX"
 
 [node name="Label5" type="Label" parent="."]
-modulate = Color(0.478431, 0.847059, 1, 1)
+modulate = Color(0.137255, 0.568627, 1, 1)
 offset_left = 23.0
 offset_top = 352.0
 offset_right = 474.0
@@ -72,6 +74,7 @@ theme_override_font_sizes/font_size = 21
 text = "MUSIC 🔈"
 
 [node name="MUSIC" parent="." instance=ExtResource("2_7ux3e")]
+modulate = Color(0, 0, 0, 0.705882)
 offset_left = 22.0
 offset_top = 374.0
 offset_right = 290.0

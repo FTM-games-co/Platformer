@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://binofp81smmie"]
+
+[ext_resource type="Texture2D" uid="uid://bixx3mtw33gac" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/16.png" id="1_hoggl"]
+[ext_resource type="Script" path="res://Menu/pause_menu.gd" id="1_mhotb"]
+[ext_resource type="Texture2D" uid="uid://ctc6tct45rf8n" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/1.png" id="2_7tget"]
+[ext_resource type="Texture2D" uid="uid://b0dap7kg35he7" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/21.png" id="3_d0oy4"]
+[ext_resource type="Texture2D" uid="uid://dbf1o6vtn6d40" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/19.png" id="4_5h3e0"]
+[ext_resource type="Texture2D" uid="uid://diygjg2uiak35" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/5.png" id="5_uq4ww"]
+[ext_resource type="Texture2D" uid="uid://dr2xfb6fani11" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/4.png" id="6_6psi4"]
+[ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="8_0f5xl"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_mhotb")
+
+[node name="BG2" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.576471, 0.384314, 0.498039, 0.372549)
+
+[node name="Letters" type="Sprite2D" parent="BG2"]
+position = Vector2(100, 0)
+
+[node name="16" type="Sprite2D" parent="BG2/Letters"]
+position = Vector2(272.115, 126)
+scale = Vector2(6.223, 6)
+texture = ExtResource("1_hoggl")
+
+[node name="1" type="Sprite2D" parent="BG2/Letters"]
+position = Vector2(359.115, 126)
+scale = Vector2(6.223, 6)
+texture = ExtResource("2_7tget")
+
+[node name="21" type="Sprite2D" parent="BG2/Letters"]
+position = Vector2(446.115, 127)
+scale = Vector2(6.223, 6)
+texture = ExtResource("3_d0oy4")
+
+[node name="19" type="Sprite2D" parent="BG2/Letters"]
+position = Vector2(534.115, 126)
+scale = Vector2(6.223, 6)
+texture = ExtResource("4_5h3e0")
+
+[node name="5" type="Sprite2D" parent="BG2/Letters"]
+position = Vector2(622.115, 127)
+scale = Vector2(6.223, 6)
+texture = ExtResource("5_uq4ww")
+
+[node name="4" type="Sprite2D" parent="BG2/Letters"]
+position = Vector2(709.115, 128)
+scale = Vector2(6.223, 6)
+texture = ExtResource("6_6psi4")
+
+[node name="BG" type="Node2D" parent="."]
+visible = false
+
+[node name="ParallaxBackground" parent="BG" instance=ExtResource("8_0f5xl")]
+visible = false
