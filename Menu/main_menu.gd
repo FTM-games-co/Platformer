@@ -9,7 +9,7 @@ func _ready():
 	pass
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Levels/level_test.tscn")
+	get_tree().change_scene_to_file("res://Menu/Level_selection/level_select.tscn")
 	clickeffect.play()
 
 func _on_menu_pressed():

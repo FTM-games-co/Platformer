@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0a5l2rqdwore"]
+
+[ext_resource type="Texture2D" uid="uid://cn3qixrkdh7qc" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="1_ww3nh"]
+[ext_resource type="Texture2D" uid="uid://eyig86w30rju" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="2_giqgl"]
+[ext_resource type="Texture2D" uid="uid://c4cynej817tb8" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="3_dorc6"]
+[ext_resource type="Texture2D" uid="uid://cegbafk6202ir" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="4_5odg1"]
+[ext_resource type="Texture2D" uid="uid://dyat4maobg2re" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" id="5_4jadh"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_357b5"]
+frames = 5
+frame_0/texture = ExtResource("1_ww3nh")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("2_giqgl")
+frame_1/duration = 0.5
+frame_2/texture = ExtResource("3_dorc6")
+frame_2/duration = 0.5
+frame_3/texture = ExtResource("4_5odg1")
+frame_3/duration = 0.5
+frame_4/texture = ExtResource("5_4jadh")
+frame_4/duration = 0.5
+
+[node name="PlayerIcon" type="TextureRect"]
+offset_left = -53.0
+offset_top = -32.0
+offset_right = 49.4
+offset_bottom = 32.0
+pivot_offset = Vector2(51.2, 32)
+texture = SubResource("AnimatedTexture_357b5")
+expand_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(51.04, 0)
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
