@@ -1,15 +1,18 @@
 extends CanvasLayer
 
 func _ready():
-	set_it_visible(false)
+	self.visible = false
+	#set_process_input(true)
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
-		set_it_visible(!get_tree().paused)
-		get_tree().paused = !get_tree().paused
-		print("Game Paused:", get_tree().paused)
+		self.visible = true
 
-func set_it_visible(is_visible):
-	for node in get_children():
-		node.visible = is_visible
-	print("UI Visibility Set to:", is_visible)
+func resume():
+	self.visible = false
+
+func _on_resume_pressed():
+	resume()
+
+func _on_main_menu_pressed():
+	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")

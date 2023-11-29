@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm271wxgpb38j"]
+[gd_scene load_steps=4 format=3 uid="uid://cm271wxgpb38j"]
 
 [ext_resource type="Script" path="res://Menu/Options.gd" id="1_ila0t"]
 [ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="2_7ux3e"]
+[ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="3_uciyw"]
 
 [node name="Options" type="Node2D"]
 script = ExtResource("1_ila0t")
 
 [node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
 offset_left = 350.0
 offset_top = 50.0
 offset_right = 801.0
@@ -21,7 +23,7 @@ offset_bottom = 115.0
 text = "Back To Main Menu"
 
 [node name="Label2" type="Label" parent="."]
-modulate = Color(0.741176, 0.188235, 0.396078, 1)
+modulate = Color(0.658824, 0.239216, 0.592157, 0.921569)
 offset_left = 350.0
 offset_top = 92.0
 offset_right = 801.0
@@ -80,5 +82,9 @@ offset_top = 374.0
 offset_right = 290.0
 offset_bottom = 421.0
 bus_name = "MUSIC"
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" parent="BG" instance=ExtResource("3_uciyw")]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
