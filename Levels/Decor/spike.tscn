@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b35ynbllk8tt"]
+
+[ext_resource type="Script" path="res://Levels/Decor/spike.gd" id="1_rixp4"]
+[ext_resource type="Texture2D" uid="uid://b5bfywma8coaj" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Spikes/Spikes.png" id="1_tammq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ortyp"]
+size = Vector2(32, 8)
+
+[node name="spike" type="Area2D"]
+script = ExtResource("1_rixp4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tammq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_ortyp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

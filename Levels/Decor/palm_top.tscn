@@ -28,7 +28,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3p2ul"]
 size = Vector2(32, 26)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+[node name="PalmTop" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_opxgv")
 autoplay = "default"
 frame_progress = 0.636316

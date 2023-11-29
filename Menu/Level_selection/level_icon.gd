@@ -13,7 +13,6 @@ class_name LevelIcon
 func _ready():
 	$Label.text = "LEVEL " + str(level_name)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Engine.is_editor_hint():
