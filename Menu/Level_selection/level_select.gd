@@ -15,21 +15,27 @@ func _input(event):
 		
 	if event.is_action_pressed("ui_left") and current_level.next_level_left:
 		current_level = current_level.next_level_left
+		current_index = int(current_level.level_name)
 		tween_icon()
 	if event.is_action_pressed("ui_right") and current_level.next_level_right:
 		current_level = current_level.next_level_right
+		current_index = int(current_level.level_name)
 		tween_icon()
 	if event.is_action_pressed("ui_up") and current_level.next_level_up:
 		current_level = current_level.next_level_up
+		current_index = int(current_level.level_name)
 		tween_icon()
 	if event.is_action_pressed("ui_down") and current_level.next_level_down:
 		current_level = current_level.next_level_down
+		current_index = int(current_level.level_name)
 		tween_icon()
 
 
 	if event.is_action_pressed("ui_accept"):
-		if current_level.next_scene_path:
+		if current_level.next_scene_path and Game.progress >= current_index :
 			get_tree().change_scene_to_file(current_level.next_scene_path)
+		else:
+			return
 			
 func tween_icon():
 	move_tween = get_tree().create_tween()
