@@ -11,6 +11,7 @@
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
 process_physics_priority = 1
+visible = false
 script = ExtResource("1_mhotb")
 
 [node name="BG" type="ColorRect" parent="."]
@@ -19,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.698039, 0.333333, 0.0705882, 0.223529)
+color = Color(0.215686, 0.533333, 0.133333, 0.0901961)
 
 [node name="Letters" type="Sprite2D" parent="BG"]
 position = Vector2(100, 0)
@@ -61,9 +62,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -76.0
-offset_top = -124.0
+offset_top = -135.0
 offset_right = 84.0
-offset_bottom = -48.0
+offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Resume"
@@ -75,9 +76,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -76.0
-offset_top = -30.0
+offset_top = -43.0
 offset_right = 84.0
-offset_bottom = 46.0
+offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Main Menu"
