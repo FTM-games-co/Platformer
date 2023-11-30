@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.215686, 0.533333, 0.133333, 0.0901961)
+color = Color(0.572549, 0.415686, 0.262745, 0.356863)
 
 [node name="Letters" type="Sprite2D" parent="BG"]
 position = Vector2(100, 0)
@@ -61,27 +61,42 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -135.0
-offset_right = 84.0
-offset_bottom = -59.0
+offset_left = -80.0
+offset_top = -121.0
+offset_right = 80.0
+offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Resume"
 
-[node name="MainMenu" type="Button" parent="."]
+[node name="Quit" type="Button" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -43.0
-offset_right = 84.0
-offset_bottom = 33.0
+offset_left = -80.0
+offset_top = 43.0
+offset_right = 80.0
+offset_bottom = 119.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Main Menu"
+text = "Quit"
+
+[node name="Options" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -39.0
+offset_right = 81.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
 
 [connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]

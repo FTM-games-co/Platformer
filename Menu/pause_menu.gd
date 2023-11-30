@@ -24,7 +24,10 @@ func _on_resume_pressed() -> void:
 	_is_paused = false
 	
 
-func _on_main_menu_pressed() -> void:
+func _on_quit_pressed() -> void:
+	get_tree().quit()
+
+
+func _on_options_pressed() -> void:
+	get_tree().change_scene_to_file("res://Menu/options.tscn")
 	_is_paused = false
-	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
-	
