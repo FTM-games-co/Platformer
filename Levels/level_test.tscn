@@ -732,7 +732,7 @@ sources/0 = SubResource("TileSetAtlasSource_o61by")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qqjii"]
 size = Vector2(1136, 669)
 
-[node name="LevelTest" type="Node2D"]
+[node name="LevelTest2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_si5ba")
@@ -778,7 +778,6 @@ position = Vector2(264, 384)
 [node name="Area2D" type="Area2D" parent="Boundaries"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Area2D"]
-visible = false
 position = Vector2(576, 342.5)
 shape = SubResource("RectangleShape2D_qqjii")
 
