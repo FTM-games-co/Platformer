@@ -27,7 +27,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p84ye"]
-size = Vector2(96, 32)
+size = Vector2(96, 128)
 
 [node name="WaterTop" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_lha7g")
@@ -38,6 +38,7 @@ frame_progress = 0.785498
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 80)
 shape = SubResource("RectangleShape2D_p84ye")
 
 [node name="1" type="Sprite2D" parent="."]

@@ -15,7 +15,7 @@ func player_damage():
 func player_immortality():
 	immortality = true
 	print("immortality is on")
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1).timeout
 	disable_player_immortality()
 	
 func disable_player_immortality():

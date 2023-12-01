@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="10_njcvp"]
 [ext_resource type="PackedScene" uid="uid://bqwyso1nrno4" path="res://Util/GUI/counter.tscn" id="11_7kpjy"]
 [ext_resource type="PackedScene" uid="uid://qp5md81gdqq" path="res://Levels/Decor/palm_top.tscn" id="13_1y6yr"]
-[ext_resource type="PackedScene" uid="uid://bhtilh681i8r3" path="res://Levels/Decor/water_top.tscn" id="14_kewqa"]
 [ext_resource type="PackedScene" uid="uid://byqwgy7gbvjf5" path="res://Levels/Decor/ship.tscn" id="15_s8dwb"]
+[ext_resource type="PackedScene" uid="uid://cy4n8dbn38ui" path="res://Levels/Decor/water_top_a_2d.tscn" id="16_58np5"]
 [ext_resource type="PackedScene" uid="uid://b35ynbllk8tt" path="res://Levels/Decor/spike.tscn" id="16_wv3s0"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="17_yhaha"]
 [ext_resource type="PackedScene" uid="uid://binofp81smmie" path="res://Menu/pause_menu.tscn" id="18_0t081"]
@@ -969,17 +969,8 @@ metadata/_edit_lock_ = true
 [node name="Decor" type="Node2D" parent="."]
 position = Vector2(303, 271)
 
-[node name="WaterTop2" parent="Decor" instance=ExtResource("14_kewqa")]
-position = Vector2(857, 249)
-
-[node name="WaterTop3" parent="Decor" instance=ExtResource("14_kewqa")]
-position = Vector2(953, 249)
-
 [node name="Ship" parent="Decor" instance=ExtResource("15_s8dwb")]
-position = Vector2(-255, 25)
-
-[node name="WaterTop" parent="Decor" instance=ExtResource("14_kewqa")]
-position = Vector2(-255, 41)
+position = Vector2(-255, 17)
 
 [node name="palm_top" parent="Decor" instance=ExtResource("13_1y6yr")]
 position = Vector2(0, 1)
@@ -1011,6 +1002,15 @@ position = Vector2(897, 225)
 
 [node name="Goal" parent="Decor" instance=ExtResource("8_c0qhe")]
 position = Vector2(2657, -71)
+
+[node name="water_top_a2d" parent="Decor" instance=ExtResource("16_58np5")]
+position = Vector2(-255, 33)
+
+[node name="water_top_a2d2" parent="Decor" instance=ExtResource("16_58np5")]
+position = Vector2(857, 257)
+
+[node name="water_top_a2d3" parent="Decor" instance=ExtResource("16_58np5")]
+position = Vector2(953, 257)
 
 [node name="Spikes" type="Node2D" parent="."]
 position = Vector2(303, 271)
