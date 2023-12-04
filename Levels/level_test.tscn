@@ -812,5 +812,6 @@ metadata/_edit_lock_ = true
 script = ExtResource("12_exlds")
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("13_t7cmp")]
+visible = false
 
 [connection signal="body_exited" from="Boundaries/Area2D" to="Player/Spawnpoint" method="_on_area_2d_body_exited"]
