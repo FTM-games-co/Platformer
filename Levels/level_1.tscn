@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bmj3m68lejk5d"]
+[gd_scene load_steps=23 format=3 uid="uid://bmj3m68lejk5d"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_3ogad"]
 [ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="2_6vgvn"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://bhtilh681i8r3" path="res://Levels/Decor/water_top.tscn" id="14_kewqa"]
 [ext_resource type="PackedScene" uid="uid://byqwgy7gbvjf5" path="res://Levels/Decor/ship.tscn" id="15_s8dwb"]
 [ext_resource type="PackedScene" uid="uid://b35ynbllk8tt" path="res://Levels/Decor/spike.tscn" id="16_wv3s0"]
+[ext_resource type="Script" path="res://Menu/pause_menu.gd" id="17_yhaha"]
+[ext_resource type="PackedScene" uid="uid://binofp81smmie" path="res://Menu/pause_menu.tscn" id="18_0t081"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
 texture = ExtResource("1_3ogad")
@@ -1069,5 +1071,11 @@ position = Vector2(1761, 17)
 
 [node name="spike19" parent="Spikes" instance=ExtResource("16_wv3s0")]
 position = Vector2(1793, 17)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("17_yhaha")
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("18_0t081")]
+visible = false
 
 [connection signal="body_exited" from="Boundaries/Area2D" to="Player/Spawnpoint" method="_on_area_2d_body_exited"]
