@@ -1,16 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cy4n8dbn38ui"]
+[gd_scene load_steps=4 format=3 uid="uid://cy4n8dbn38ui"]
 
 [ext_resource type="PackedScene" uid="uid://bhtilh681i8r3" path="res://Levels/Decor/water_top.tscn" id="1_mr5hj"]
 [ext_resource type="Script" path="res://Levels/Decor/water_top_a_2d.gd" id="1_pn13p"]
-[ext_resource type="PackedScene" uid="uid://c4bn1esidk8up" path="res://Effects/hit_effect.tscn" id="2_udion"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lidb0"]
 size = Vector2(96, 136)
 
 [node name="water_top_a2d" type="Area2D"]
 script = ExtResource("1_pn13p")
-PLAYER_IN = ExtResource("2_udion")
-PLAYER_OUT = ExtResource("2_udion")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 76)
