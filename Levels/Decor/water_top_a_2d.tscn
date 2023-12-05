@@ -4,17 +4,16 @@
 [ext_resource type="Script" path="res://Levels/Decor/water_top_a_2d.gd" id="1_pn13p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lidb0"]
-size = Vector2(96, 136)
+size = Vector2(96, 160)
 
 [node name="water_top_a2d" type="Area2D"]
 script = ExtResource("1_pn13p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 76)
+position = Vector2(0, 64)
 shape = SubResource("RectangleShape2D_lidb0")
 
 [node name="WaterTop" parent="." instance=ExtResource("1_mr5hj")]
 metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,11 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://bmj3m68lejk5d"]
+[gd_scene load_steps=21 format=3 uid="uid://bmj3m68lejk5d"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_3ogad"]
 [ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="2_6vgvn"]
 [ext_resource type="Texture2D" uid="uid://c0a7yq4f3mabx" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png" id="2_26qxm"]
 [ext_resource type="PackedScene" uid="uid://dj7ev3ussmm8c" path="res://Collectibles/chest.tscn" id="3_e6gg8"]
 [ext_resource type="PackedScene" uid="uid://bc4o2bnrw8yym" path="res://Collectibles/key.tscn" id="4_84xti"]
-[ext_resource type="PackedScene" uid="uid://cvlrkqf0a28dd" path="res://Util/GUI/spawnpoint.tscn" id="5_kftlj"]
 [ext_resource type="PackedScene" uid="uid://da1dotberd134" path="res://Player/player.tscn" id="6_81u84"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="7_gi3sl"]
 [ext_resource type="PackedScene" uid="uid://c3vsnpuwss30d" path="res://Collectibles/goal.tscn" id="8_c0qhe"]
@@ -16,8 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://byqwgy7gbvjf5" path="res://Levels/Decor/ship.tscn" id="15_s8dwb"]
 [ext_resource type="PackedScene" uid="uid://cy4n8dbn38ui" path="res://Levels/Decor/water_top_a_2d.tscn" id="16_58np5"]
 [ext_resource type="PackedScene" uid="uid://b35ynbllk8tt" path="res://Levels/Decor/spike.tscn" id="16_wv3s0"]
-[ext_resource type="Script" path="res://Menu/pause_menu.gd" id="17_yhaha"]
-[ext_resource type="PackedScene" uid="uid://binofp81smmie" path="res://Menu/pause_menu.tscn" id="18_0t081"]
+[ext_resource type="Script" path="res://Menu/pause_menu.gd" id="17_6l2o0"]
+[ext_resource type="PackedScene" uid="uid://r6xm031pxux5" path="res://Menu/pause_menu.tscn" id="18_d0prl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
 texture = ExtResource("1_3ogad")
@@ -829,9 +828,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_o61by")
 sources/1 = SubResource("TileSetAtlasSource_6o58p")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqjii"]
-size = Vector2(3072, 693)
-
 [node name="LevelTest" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -909,23 +905,12 @@ position = Vector2(1200, 469)
 
 [node name="Player" type="Node2D" parent="."]
 
-[node name="Spawnpoint" parent="Player" instance=ExtResource("5_kftlj")]
-
 [node name="Player" parent="Player" instance=ExtResource("6_81u84")]
 position = Vector2(112, 256)
 
 [node name="BG" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("7_gi3sl")]
-
-[node name="Boundaries" type="Node2D" parent="."]
-visible = false
-
-[node name="Area2D" type="Area2D" parent="Boundaries"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Area2D"]
-position = Vector2(1536, 330.5)
-shape = SubResource("RectangleShape2D_qqjii")
 
 [node name="Flags" type="Node2D" parent="."]
 visible = false
@@ -1072,10 +1057,8 @@ position = Vector2(1761, 17)
 [node name="spike19" parent="Spikes" instance=ExtResource("16_wv3s0")]
 position = Vector2(1793, 17)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("17_yhaha")
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+script = ExtResource("17_6l2o0")
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("18_0t081")]
+[node name="PauseMenu" parent="PauseMenu" instance=ExtResource("18_d0prl")]
 visible = false
-
-[connection signal="body_exited" from="Boundaries/Area2D" to="Player/Spawnpoint" method="_on_area_2d_body_exited"]

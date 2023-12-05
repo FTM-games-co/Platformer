@@ -101,7 +101,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("15_ri77w")
 }],
-"loop": false,
+"loop": true,
 "name": &"Hit",
 "speed": 5.0
 }, {
@@ -438,6 +438,7 @@ shape = SubResource("RectangleShape2D_pwxrl")
 sprite_frames = SubResource("SpriteFrames_3o4jo")
 animation = &"Dead"
 autoplay = "Idle"
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
@@ -448,7 +449,7 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(1e-05, 1e-05)
-zoom = Vector2(2, 2)
+zoom = Vector2(2.2, 2.2)
 limit_left = 0
 limit_top = 0
 limit_bottom = 648

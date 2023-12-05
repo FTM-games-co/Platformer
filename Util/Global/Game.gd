@@ -14,9 +14,9 @@ func player_reset():
 	playerKeys = 0
 	dead = false
 
-func player_damage():
+func player_damage(amount):
 	if not immortality:
-		playerHealth -= 1
+		playerHealth -= amount
 		player_immortality()
 	if playerHealth <= 0:
 		dead = true

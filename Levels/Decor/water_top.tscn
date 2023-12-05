@@ -53,6 +53,18 @@ texture = ExtResource("5_s2ha8")
 position = Vector2(0, 96)
 texture = ExtResource("5_s2ha8")
 
+[node name="7" type="Sprite2D" parent="."]
+position = Vector2(0, 224)
+texture = ExtResource("5_s2ha8")
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(0, 192)
+texture = ExtResource("5_s2ha8")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(0, 160)
+texture = ExtResource("5_s2ha8")
+
 [node name="4" type="Sprite2D" parent="."]
 position = Vector2(0, 128)
 texture = ExtResource("5_s2ha8")

@@ -13,7 +13,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func take_damage_and_knockback():
 	if not knockback_cooldown:
 		knockback_cooldown = true
-		Game.player_damage()
+		Game.player_damage(1)
 		knockback()
 	if Game.dead == true:
 		print("player is now dead")
@@ -22,7 +22,7 @@ func take_damage_and_knockback():
 		get_tree().change_scene_to_file("res://Menu/death_screen.tscn")
 
 func knockback():
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var _direction = Input.get_axis("ui_left", "ui_right")
 	velocity.y = jump_velocity * .6
 	if get_node("AnimatedSprite2D").flip_h:
 		velocity.x = speed

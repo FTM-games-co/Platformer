@@ -14,6 +14,6 @@ func _ready():
 	$Label.text = "LEVEL " + str(level_name)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Engine.is_editor_hint():
 		$Label.text = "LEVEL " + str(level_name)
