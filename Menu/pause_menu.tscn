@@ -57,6 +57,7 @@ color = Color(0.498039, 0.498039, 0.498039, 0.352941)
 [node name="Letters" type="Sprite2D" parent="BG"]
 modulate = Color(1, 0.54902, 1, 1)
 position = Vector2(50, -50)
+rotation = 0.00174533
 scale = Vector2(1.1, 1.1)
 
 [node name="16" type="Sprite2D" parent="BG/Letters"]

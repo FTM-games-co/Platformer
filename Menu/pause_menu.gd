@@ -1,4 +1,5 @@
 extends CanvasLayer
+var clickeffect = ClickEffect
 
 var _is_paused:bool = false:
 	set(value):
@@ -31,6 +32,7 @@ func _on_resume_pressed() -> void:
 	var uicanvas = find_child("UI_canvas", true, false)
 	_is_paused = false
 	uicanvas.visible = true
+	clickeffect.play()
 	print("resumed")
 
 func _on_quit_pressed() -> void:
