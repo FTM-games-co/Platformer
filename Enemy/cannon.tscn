@@ -99,7 +99,7 @@ shape = SubResource("RectangleShape2D_ytlb5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hm0p4")
 animation = &"Fire"
-autoplay = "Idle"
+autoplay = "Fire"
 
 [node name="Cannon Range" type="Area2D" parent="."]
 

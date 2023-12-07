@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="8_11s5r"]
 [ext_resource type="PackedScene" uid="uid://bqwyso1nrno4" path="res://Util/GUI/counter.tscn" id="9_lye6h"]
 [ext_resource type="PackedScene" uid="uid://bgu4g6770bgm6" path="res://Enemy/cannon.tscn" id="10_svf7c"]
-[ext_resource type="PackedScene" uid="uid://0c7ux4r04dv5" path="res://Enemy/cball.tscn" id="11_no5rh"]
+[ext_resource type="Script" path="res://Levels/Cannonball.gd" id="11_rp074"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
 texture = ExtResource("1_6yy86")
@@ -794,12 +794,13 @@ offset_bottom = 16.0
 [node name="Cannon" parent="." instance=ExtResource("10_svf7c")]
 position = Vector2(618, 326)
 
-[node name="CballContainer" type="Node2D" parent="."]
-
 [node name="Cannonball" type="Node2D" parent="."]
+script = ExtResource("11_rp074")
 
-[node name="Cball" parent="Cannonball" instance=ExtResource("11_no5rh")]
-position = Vector2(591, 328)
+[node name="Timer" type="Timer" parent="Cannonball"]
+process_callback = 0
+wait_time = 1.25
+autostart = true
 
 [connection signal="body_exited" from="Boundaries/Area2D" to="Player/Spawnpoint" method="_on_area_2d_body_exited"]
-[connection signal="visibility_changed" from="CballContainer" to="Player/Spawnpoint" method="_on_cball_container_visibility_changed"]
+[connection signal="timeout" from="Cannonball/Timer" to="Cannonball" method="_on_timer_timeout"]

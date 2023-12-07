@@ -48,6 +48,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mt5nj"]
+radius = 2.0
 
 [node name="Cball" type="Area2D"]
 script = ExtResource("1_wrvks")
@@ -56,14 +57,9 @@ script = ExtResource("1_wrvks")
 sprite_frames = SubResource("SpriteFrames_vxiuk")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.0997029
+frame_progress = 0.727861
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mt5nj")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(18, 0)
-scale = Vector2(0.325, 0.9)
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
