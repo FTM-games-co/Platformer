@@ -7,4 +7,6 @@
 stream = ExtResource("1_l1y6m")
 volume_db = -12.0
 pitch_scale = 0.76
+max_distance = 15000.0
+bus = &"SFX"
 script = ExtResource("2_ylytq")

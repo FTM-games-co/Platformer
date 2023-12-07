@@ -23,6 +23,11 @@ JumpEffect="*res://Audio/jump_effect.tscn"
 ClickEffect="*res://Audio/click_effect.tscn"
 Game="*res://Util/Global/Game.gd"
 Saveload="*res://Util/Global/Saveload.gd"
+DeathMusic="*res://Audio/death_music.tscn"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [rendering]
 

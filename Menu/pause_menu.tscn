@@ -1,0 +1,310 @@
+[gd_scene load_steps=24 format=3 uid="uid://r6xm031pxux5"]
+
+[ext_resource type="Texture2D" uid="uid://bixx3mtw33gac" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/16.png" id="1_hoggl"]
+[ext_resource type="Script" path="res://Menu/pause_menu.gd" id="1_mhotb"]
+[ext_resource type="Texture2D" uid="uid://ctc6tct45rf8n" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/1.png" id="2_7tget"]
+[ext_resource type="Texture2D" uid="uid://b0dap7kg35he7" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/21.png" id="3_d0oy4"]
+[ext_resource type="Texture2D" uid="uid://dbf1o6vtn6d40" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/19.png" id="4_5h3e0"]
+[ext_resource type="Texture2D" uid="uid://diygjg2uiak35" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/5.png" id="5_uq4ww"]
+[ext_resource type="Texture2D" uid="uid://dr2xfb6fani11" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/4.png" id="6_6psi4"]
+[ext_resource type="Texture2D" uid="uid://dqvxvl707uabk" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/2.png" id="9_m4fi3"]
+[ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="9_pqg4b"]
+[ext_resource type="Texture2D" uid="uid://dt1fr8v04nh4v" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="10_aep75"]
+[ext_resource type="FontFile" path="res://Assets/Font/ARCADECLASSIC.TTF" id="11_gjj8p"]
+[ext_resource type="Texture2D" uid="uid://ftdsp7upl1yd" path="res://Assets/Treasure Hunters/GUI.png" id="12_upeg8"]
+[ext_resource type="Texture2D" uid="uid://ceuxgycnvhyop" path="res://Assets/Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/01.png" id="14_b6mcy"]
+[ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="15_oa4om"]
+[ext_resource type="PackedScene" uid="uid://bqwyso1nrno4" path="res://Util/GUI/counter.tscn" id="16_tueg7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7eben"]
+texture = ExtResource("12_upeg8")
+region_rect = Rect2(113, 81, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l01cw"]
+texture = ExtResource("12_upeg8")
+region_rect = Rect2(113, 98, 30, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bva7u"]
+texture = ExtResource("12_upeg8")
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u0y7k"]
+texture = ExtResource("12_upeg8")
+region_rect = Rect2(113, 81, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eofp7"]
+texture = ExtResource("12_upeg8")
+region_rect = Rect2(113, 98, 30, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ays16"]
+texture = ExtResource("12_upeg8")
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34sq7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a6u7n"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+process_physics_priority = 1
+script = ExtResource("1_mhotb")
+
+[node name="BG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.498039, 0.498039, 0.498039, 0.352941)
+
+[node name="Letters" type="Sprite2D" parent="BG"]
+modulate = Color(1, 0.54902, 1, 1)
+position = Vector2(50, -50)
+rotation = 0.00174533
+scale = Vector2(1.1, 1.1)
+
+[node name="16" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(277.57, 106)
+scale = Vector2(6.223, 6)
+texture = ExtResource("1_hoggl")
+
+[node name="1" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(364.57, 106)
+scale = Vector2(6.223, 6)
+texture = ExtResource("2_7tget")
+
+[node name="21" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(451.57, 107)
+scale = Vector2(6.223, 6)
+texture = ExtResource("3_d0oy4")
+
+[node name="19" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(539.569, 106)
+scale = Vector2(6.223, 6)
+texture = ExtResource("4_5h3e0")
+
+[node name="5" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(627.569, 106.091)
+scale = Vector2(6.223, 6)
+texture = ExtResource("5_uq4ww")
+
+[node name="4" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(714.57, 106.182)
+scale = Vector2(6.223, 6)
+texture = ExtResource("6_6psi4")
+
+[node name="Kanban" type="Sprite2D" parent="BG"]
+modulate = Color(1, 1, 0.705882, 1)
+position = Vector2(590, 258)
+scale = Vector2(3.45833, 2.47917)
+texture = ExtResource("9_m4fi3")
+
+[node name="Kanban2" type="Sprite2D" parent="BG"]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(591.5, 504.25)
+scale = Vector2(6.96875, 6.89063)
+skew = -0.0349066
+texture = ExtResource("10_aep75")
+
+[node name="MASTER" parent="BG" instance=ExtResource("9_pqg4b")]
+modulate = Color(0, 0, 0, 0.705882)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = 102.5
+offset_right = 83.0
+offset_bottom = 133.5
+grow_horizontal = 2
+grow_vertical = 2
+bus_name = "Master"
+
+[node name="Label3" type="Label" parent="BG"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = 76.5
+offset_right = 31.0
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_gjj8p")
+theme_override_font_sizes/font_size = 24
+text = "MASTER"
+
+[node name="Label4" type="Label" parent="BG"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = 143.0
+offset_right = 32.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_gjj8p")
+theme_override_font_sizes/font_size = 24
+text = "SFX"
+
+[node name="SFX" parent="BG" instance=ExtResource("9_pqg4b")]
+modulate = Color(0, 0, 0, 0.705882)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = 167.0
+offset_right = 84.0
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+bus_name = "SFX"
+
+[node name="MUSIC" parent="BG" instance=ExtResource("9_pqg4b")]
+modulate = Color(0, 0, 0, 0.705882)
+layout_mode = 0
+offset_left = 491.0
+offset_top = 560.0
+offset_right = 662.0
+offset_bottom = 600.0
+bus_name = "MUSIC"
+
+[node name="Label5" type="Label" parent="BG"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = 216.0
+offset_right = 32.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_gjj8p")
+theme_override_font_sizes/font_size = 24
+text = "MUSIC"
+
+[node name="Resume" type="Button" parent="BG"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -133.0
+offset_right = 65.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_7eben")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l01cw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bva7u")
+text = "Resume"
+
+[node name="Quit" type="Button" parent="BG"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -54.0
+offset_right = 65.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_u0y7k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_eofp7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ays16")
+text = "Quit"
+
+[node name="Kanban3" type="Sprite2D" parent="BG"]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(858.5, 307.5)
+scale = Vector2(7.46875, 2.34375)
+texture = ExtResource("10_aep75")
+
+[node name="Label6" type="Label" parent="BG"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 176.0
+offset_top = -55.0
+offset_right = 393.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_gjj8p")
+theme_override_font_sizes/font_size = 24
+text = "MOVING = ←↑→↓
+JUMPING = SPACEBAR"
+
+[node name="01" type="Sprite2D" parent="BG"]
+position = Vector2(586, 379)
+scale = Vector2(1, 1.0625)
+texture = ExtResource("14_b6mcy")
+
+[node name="UI_canvas" type="CanvasLayer" parent="BG"]
+offset = Vector2(25, 0)
+scale = Vector2(2.5, 2.5)
+transform = Transform2D(2.5, 0, 0, 2.5, 25, 0)
+
+[node name="Health" parent="BG/UI_canvas" instance=ExtResource("15_oa4om")]
+anchors_preset = -1
+anchor_left = -0.006
+anchor_top = 0.004
+anchor_right = 0.085
+anchor_bottom = 0.047
+offset_left = 6.112
+offset_top = -6.192
+offset_right = -98.72
+offset_bottom = -34.056
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Coincount" parent="BG/UI_canvas" instance=ExtResource("16_tueg7")]
+offset_left = -10.0
+offset_top = 11.8
+offset_right = -1054.0
+offset_bottom = -606.2
+
+[node name="Pause" type="Button" parent="BG/UI_canvas"]
+offset_left = -7.2
+offset_top = 44.8
+offset_right = 22.8
+offset_bottom = 67.8
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_34sq7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a6u7n")
+text = "⚙️"
+
+[connection signal="pressed" from="BG/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="BG/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="BG/UI_canvas/Pause" to="." method="_on_pause_pressed"]

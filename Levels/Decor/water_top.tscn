@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhtilh681i8r3"]
+
+[ext_resource type="Texture2D" uid="uid://csxl1sklgy8of" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/1.png" id="1_a3k33"]
+[ext_resource type="Texture2D" uid="uid://ceni8c3dq6uj5" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/2.png" id="2_qeduq"]
+[ext_resource type="Texture2D" uid="uid://ci0pxjps4a0k8" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/3.png" id="3_nxj0i"]
+[ext_resource type="Texture2D" uid="uid://6me40wbktqr8" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/4.png" id="4_b0fxq"]
+[ext_resource type="Texture2D" uid="uid://dh47ifng10y02" path="res://Assets/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Bottom/1.png" id="5_s2ha8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lha7g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a3k33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qeduq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nxj0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b0fxq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p84ye"]
+size = Vector2(96, 128)
+
+[node name="WaterTop" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_lha7g")
+autoplay = "default"
+frame = 3
+frame_progress = 0.785498
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 80)
+shape = SubResource("RectangleShape2D_p84ye")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(0, 32)
+texture = ExtResource("5_s2ha8")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(0, 64)
+texture = ExtResource("5_s2ha8")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(0, 96)
+texture = ExtResource("5_s2ha8")
+
+[node name="7" type="Sprite2D" parent="."]
+position = Vector2(0, 224)
+texture = ExtResource("5_s2ha8")
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(0, 192)
+texture = ExtResource("5_s2ha8")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(0, 160)
+texture = ExtResource("5_s2ha8")
+
+[node name="4" type="Sprite2D" parent="."]
+position = Vector2(0, 128)
+texture = ExtResource("5_s2ha8")

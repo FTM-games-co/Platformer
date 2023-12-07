@@ -3,7 +3,8 @@ extends Area2D
 var coineffect = CoinEffect
 
 func _on_body_entered(body):
-	if body.name == "Player":
+	if body.name == "Player" and $CollisionShape2D.disabled == false:
+		$CollisionShape2D.disabled = true
 		Game.playerGold += 1
 		var tween = get_tree().create_tween()
 		var tween1 = get_tree().create_tween()

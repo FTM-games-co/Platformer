@@ -7,4 +7,6 @@
 stream = ExtResource("1_v2rpu")
 volume_db = -15.0
 autoplay = true
+max_distance = 15000.0
+bus = &"MUSIC"
 script = ExtResource("2_tp1oc")

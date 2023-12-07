@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy4n8dbn38ui"]
+
+[ext_resource type="PackedScene" uid="uid://bhtilh681i8r3" path="res://Levels/Decor/water_top.tscn" id="1_mr5hj"]
+[ext_resource type="Script" path="res://Levels/Decor/water_top_a_2d.gd" id="1_pn13p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lidb0"]
+size = Vector2(96, 160)
+
+[node name="water_top_a2d" type="Area2D"]
+script = ExtResource("1_pn13p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 64)
+shape = SubResource("RectangleShape2D_lidb0")
+
+[node name="WaterTop" parent="." instance=ExtResource("1_mr5hj")]
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

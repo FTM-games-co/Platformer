@@ -2,13 +2,14 @@ extends Node2D
 
 var backgroundmusic = BackGroundMusic
 var clickeffect = ClickEffect
+var deathmusic = DeathMusic
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Levels/level_test.tscn")
+	get_tree().change_scene_to_file("res://Menu/Level_selection/level_select.tscn")
 	clickeffect.play()
 
 func _on_menu_pressed():
@@ -24,3 +25,4 @@ func _on_music_toggled(button_pressed):
 		backgroundmusic.play()
 	else:
 		backgroundmusic.stop()
+		deathmusic.stop()
