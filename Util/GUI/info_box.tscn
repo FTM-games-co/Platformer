@@ -1,0 +1,130 @@
+[gd_scene load_steps=13 format=3 uid="uid://cchqc6egsixpb"]
+
+[ext_resource type="Texture2D" uid="uid://b2idkeooivkur" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Board/1.png" id="1_13ch7"]
+[ext_resource type="Script" path="res://Util/GUI/info_box.gd" id="1_ied51"]
+[ext_resource type="Texture2D" uid="uid://lmkp5d8hg71d" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Board/2.png" id="2_ejuak"]
+[ext_resource type="Texture2D" uid="uid://hbwylvyvase" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Board/3.png" id="3_4shkv"]
+[ext_resource type="Texture2D" uid="uid://btxwpva0v62o5" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Board/7.png" id="4_jkpsi"]
+[ext_resource type="Texture2D" uid="uid://cyoy6voohjrdn" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Board/8.png" id="5_8d4f2"]
+[ext_resource type="Texture2D" uid="uid://n40oxx4ipkku" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Board/9.png" id="6_5c0ox"]
+[ext_resource type="Texture2D" uid="uid://bt52kjx345rv" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Board/4.png" id="7_03ac6"]
+[ext_resource type="Texture2D" uid="uid://bh51wvqh4088l" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Board/5.png" id="8_b3l5y"]
+[ext_resource type="Texture2D" uid="uid://b8dpbb3d7kc40" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Board/6.png" id="9_ucl8a"]
+[ext_resource type="FontFile" uid="uid://bw63qkekcs8jy" path="res://Assets/Font/NotJamOldStyle14.ttf" id="10_ef61e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kt8px"]
+size = Vector2(96, 312)
+
+[node name="InfoBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ied51")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-40, -100)
+shape = SubResource("RectangleShape2D_kt8px")
+
+[node name="Board" type="Node2D" parent="."]
+position = Vector2(176, 24)
+
+[node name="Sprite2D" type="Sprite2D" parent="Board"]
+position = Vector2(-80, -120)
+texture = ExtResource("1_13ch7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Board"]
+position = Vector2(-48, -120)
+texture = ExtResource("2_ejuak")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Board"]
+position = Vector2(-16, -120)
+texture = ExtResource("2_ejuak")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Board"]
+position = Vector2(80, -120)
+texture = ExtResource("3_4shkv")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Board"]
+position = Vector2(-80, -56)
+texture = ExtResource("4_jkpsi")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Board"]
+position = Vector2(-48, -56)
+texture = ExtResource("5_8d4f2")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Board"]
+position = Vector2(-16, -56)
+texture = ExtResource("5_8d4f2")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Board"]
+position = Vector2(16, -120)
+texture = ExtResource("2_ejuak")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Board"]
+position = Vector2(48, -120)
+texture = ExtResource("2_ejuak")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Board"]
+position = Vector2(16, -56)
+texture = ExtResource("5_8d4f2")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Board"]
+position = Vector2(48, -56)
+texture = ExtResource("5_8d4f2")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Board"]
+position = Vector2(80, -56)
+texture = ExtResource("6_5c0ox")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Board"]
+position = Vector2(-80, -88)
+texture = ExtResource("7_03ac6")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Board"]
+position = Vector2(-48, -88)
+texture = ExtResource("8_b3l5y")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Board"]
+position = Vector2(-16, -88)
+texture = ExtResource("8_b3l5y")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Board"]
+position = Vector2(16, -88)
+texture = ExtResource("8_b3l5y")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Board"]
+position = Vector2(48, -88)
+texture = ExtResource("8_b3l5y")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Board"]
+position = Vector2(80, -88)
+texture = ExtResource("9_ucl8a")
+
+[node name="Font" type="Node2D" parent="Board"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Label" type="Label" parent="Board/Font"]
+offset_left = -160.0
+offset_top = -240.0
+offset_right = 160.0
+offset_bottom = -112.0
+theme_override_colors/font_color = Color(0.866667, 0.694118, 0.501961, 1)
+theme_override_colors/font_shadow_color = Color(0.717647, 0.45098, 0.341176, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/line_spacing = -75
+theme_override_fonts/font = ExtResource("10_ef61e")
+theme_override_font_sizes/font_size = 28
+text = "CAPTURE THE ISLAND
+AND
+FIND THE TREASURE"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

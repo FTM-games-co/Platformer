@@ -17,9 +17,12 @@ func take_damage_and_knockback():
 		knockback()
 	if Game.dead == true:
 		print("player is now dead")
+		var tween = get_tree().create_tween()
+		tween.tween_property(self, "modulate:a", 0, 0.3)
 		anim.play("Dead")
-		Game.player_reset()
+		await tween.finished
 		get_tree().change_scene_to_file("res://Menu/death_screen.tscn")
+		Game.player_reset()
 
 func knockback():
 	var _direction = Input.get_axis("ui_left", "ui_right")
@@ -66,5 +69,3 @@ func _physics_process(delta):
 		anim.play("Fall")
 
 	move_and_slide()
-	
-	

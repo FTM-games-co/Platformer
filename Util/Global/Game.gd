@@ -5,6 +5,7 @@ var playerHealth = 5
 var playerGold = 0
 var playerKeys = 0
 var progress = 1
+var chest = false
 var immortality = false
 var dead = false
 
@@ -13,6 +14,7 @@ func player_reset():
 	playerGold = 0
 	playerKeys = 0
 	dead = false
+	chest = false
 
 func player_damage(amount):
 	if not immortality:

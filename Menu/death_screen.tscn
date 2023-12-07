@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bto0mp1so45h7"]
+[gd_scene load_steps=17 format=3 uid="uid://bto0mp1so45h7"]
 
 [ext_resource type="Script" path="res://Menu/deathscreen.gd" id="1_mhotb"]
 [ext_resource type="Texture2D" uid="uid://beuplwvenc12o" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Button/2.png" id="2_b8el8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://g511o0glkva3" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/25.png" id="3_05e7m"]
 [ext_resource type="Texture2D" uid="uid://c1268pooqji5a" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Button/4.png" id="3_6bdty"]
 [ext_resource type="Texture2D" uid="uid://b0dap7kg35he7" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/21.png" id="3_d0oy4"]
+[ext_resource type="Texture2D" uid="uid://dn1k26cxji03" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/3.png" id="3_ju0ue"]
 [ext_resource type="Texture2D" uid="uid://becn000rml78u" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/15.png" id="5_mvrjb"]
 [ext_resource type="Texture2D" uid="uid://diygjg2uiak35" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/5.png" id="5_uq4ww"]
 [ext_resource type="Texture2D" uid="uid://dr2xfb6fani11" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/4.png" id="6_6psi4"]
@@ -48,6 +49,7 @@ color = Color(0.572549, 0.415686, 0.262745, 0.356863)
 [node name="Board" type="Sprite2D" parent="BG"]
 position = Vector2(576, 312)
 scale = Vector2(3.6875, 3.6875)
+texture = ExtResource("3_ju0ue")
 
 [node name="Letters" type="Sprite2D" parent="BG"]
 position = Vector2(100, -56)
