@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://binofp81smmie"]
+[gd_scene load_steps=25 format=3 uid="uid://binofp81smmie"]
 
 [ext_resource type="Texture2D" uid="uid://bixx3mtw33gac" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/16.png" id="1_hoggl"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="1_mhotb"]
@@ -40,6 +40,10 @@ region_rect = Rect2(113, 98, 30, 13)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ays16"]
 texture = ExtResource("12_upeg8")
 region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34sq7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a6u7n"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -91,7 +95,7 @@ scale = Vector2(6.223, 6)
 texture = ExtResource("6_6psi4")
 
 [node name="Kanban" type="Sprite2D" parent="BG"]
-modulate = Color(1, 0.862745, 0, 1)
+modulate = Color(1, 1, 0.705882, 1)
 position = Vector2(590, 258)
 scale = Vector2(3.45833, 2.47917)
 texture = ExtResource("9_m4fi3")
@@ -293,5 +297,16 @@ offset_top = 11.8
 offset_right = -1054.0
 offset_bottom = -606.2
 
+[node name="Pause" type="Button" parent="BG/UI_canvas"]
+offset_left = -7.2
+offset_top = 44.8
+offset_right = 22.8
+offset_bottom = 67.8
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_34sq7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a6u7n")
+text = "⚙️"
+
 [connection signal="pressed" from="BG/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="BG/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="BG/UI_canvas/Pause" to="." method="_on_pause_pressed"]
