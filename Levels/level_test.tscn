@@ -797,10 +797,12 @@ scale = Vector2(2.5, 2.5)
 transform = Transform2D(2.5, 0, 0, 2.5, 25, 0)
 
 [node name="Health" parent="UI" instance=ExtResource("8_11s5r")]
+visible = false
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="Coincount" parent="UI" instance=ExtResource("9_lye6h")]
+visible = false
 offset_left = -16.4
 offset_top = 16.0
 offset_right = -16.4

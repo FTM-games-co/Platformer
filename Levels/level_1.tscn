@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bmj3m68lejk5d"]
+[gd_scene load_steps=20 format=3 uid="uid://bmj3m68lejk5d"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_3ogad"]
 [ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="2_6vgvn"]
@@ -9,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="7_gi3sl"]
 [ext_resource type="PackedScene" uid="uid://c3vsnpuwss30d" path="res://Collectibles/goal.tscn" id="8_c0qhe"]
 [ext_resource type="PackedScene" uid="uid://bue3sl7buf7rn" path="res://Enemy/crabby.tscn" id="9_e1tyb"]
-[ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="10_njcvp"]
-[ext_resource type="PackedScene" uid="uid://bqwyso1nrno4" path="res://Util/GUI/counter.tscn" id="11_7kpjy"]
 [ext_resource type="PackedScene" uid="uid://qp5md81gdqq" path="res://Levels/Decor/palm_top.tscn" id="13_1y6yr"]
 [ext_resource type="PackedScene" uid="uid://byqwgy7gbvjf5" path="res://Levels/Decor/ship.tscn" id="15_s8dwb"]
 [ext_resource type="PackedScene" uid="uid://cy4n8dbn38ui" path="res://Levels/Decor/water_top_a_2d.tscn" id="16_58np5"]
@@ -935,22 +933,6 @@ position = Vector2(2480, 320)
 
 [node name="Crabby5" parent="Enemy" instance=ExtResource("9_e1tyb")]
 position = Vector2(2744, 320)
-
-[node name="UI" type="CanvasLayer" parent="."]
-offset = Vector2(25, 0)
-scale = Vector2(2.5, 2.5)
-transform = Transform2D(2.5, 0, 0, 2.5, 25, 0)
-
-[node name="Health" parent="UI" instance=ExtResource("10_njcvp")]
-metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
-
-[node name="Coincount" parent="UI" instance=ExtResource("11_7kpjy")]
-offset_left = -16.4
-offset_top = 16.0
-offset_right = -16.4
-offset_bottom = 16.0
-metadata/_edit_lock_ = true
 
 [node name="Decor" type="Node2D" parent="."]
 position = Vector2(303, 271)
