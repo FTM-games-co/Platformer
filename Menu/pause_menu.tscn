@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://r6xm031pxux5"]
+[gd_scene load_steps=20 format=3 uid="uid://r6xm031pxux5"]
 
 [ext_resource type="Texture2D" uid="uid://bixx3mtw33gac" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/16.png" id="1_hoggl"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="1_mhotb"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dqvxvl707uabk" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/2.png" id="9_m4fi3"]
 [ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="9_pqg4b"]
 [ext_resource type="Texture2D" uid="uid://dt1fr8v04nh4v" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="10_aep75"]
-[ext_resource type="Theme" uid="uid://btfemteulgf6f" path="res://Default 2.tres" id="11_o5asg"]
 [ext_resource type="Texture2D" uid="uid://ftdsp7upl1yd" path="res://Assets/Treasure Hunters/GUI.png" id="12_upeg8"]
 [ext_resource type="Texture2D" uid="uid://lcstwnj2bcfk" path="res://Assets/Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Big/02.png" id="13_6wmnh"]
 [ext_resource type="Texture2D" uid="uid://ceuxgycnvhyop" path="res://Assets/Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/01.png" id="14_b6mcy"]
@@ -203,7 +202,6 @@ offset_right = 65.0
 offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("11_o5asg")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_7eben")
 theme_override_styles/hover = SubResource("StyleBoxTexture_l01cw")

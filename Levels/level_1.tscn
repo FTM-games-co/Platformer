@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cy4n8dbn38ui" path="res://Levels/Decor/water_top_a_2d.tscn" id="16_58np5"]
 [ext_resource type="PackedScene" uid="uid://b35ynbllk8tt" path="res://Levels/Decor/spike.tscn" id="16_wv3s0"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="17_6l2o0"]
-[ext_resource type="PackedScene" uid="uid://binofp81smmie" path="res://Menu/pause_menu.tscn" id="18_d0prl"]
+[ext_resource type="PackedScene" uid="uid://r6xm031pxux5" path="res://Menu/pause_menu.tscn" id="18_d0prl"]
 [ext_resource type="PackedScene" uid="uid://cchqc6egsixpb" path="res://Util/GUI/info_box.tscn" id="18_ywr08"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
