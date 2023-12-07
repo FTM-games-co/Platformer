@@ -1,21 +1,21 @@
-[gd_scene load_steps=21 format=3 uid="uid://bmj3m68lejk5d"]
+[gd_scene load_steps=20 format=3 uid="uid://bmj3m68lejk5d"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_3ogad"]
 [ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="2_6vgvn"]
 [ext_resource type="Texture2D" uid="uid://c0a7yq4f3mabx" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png" id="2_26qxm"]
 [ext_resource type="PackedScene" uid="uid://dj7ev3ussmm8c" path="res://Collectibles/chest.tscn" id="3_e6gg8"]
 [ext_resource type="PackedScene" uid="uid://bc4o2bnrw8yym" path="res://Collectibles/key.tscn" id="4_84xti"]
-[ext_resource type="PackedScene" uid="uid://cvlrkqf0a28dd" path="res://Util/GUI/spawnpoint.tscn" id="5_kftlj"]
 [ext_resource type="PackedScene" uid="uid://da1dotberd134" path="res://Player/player.tscn" id="6_81u84"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="7_gi3sl"]
 [ext_resource type="PackedScene" uid="uid://c3vsnpuwss30d" path="res://Collectibles/goal.tscn" id="8_c0qhe"]
 [ext_resource type="PackedScene" uid="uid://bue3sl7buf7rn" path="res://Enemy/crabby.tscn" id="9_e1tyb"]
 [ext_resource type="PackedScene" uid="uid://qp5md81gdqq" path="res://Levels/Decor/palm_top.tscn" id="13_1y6yr"]
-[ext_resource type="PackedScene" uid="uid://bhtilh681i8r3" path="res://Levels/Decor/water_top.tscn" id="14_kewqa"]
 [ext_resource type="PackedScene" uid="uid://byqwgy7gbvjf5" path="res://Levels/Decor/ship.tscn" id="15_s8dwb"]
+[ext_resource type="PackedScene" uid="uid://cy4n8dbn38ui" path="res://Levels/Decor/water_top_a_2d.tscn" id="16_58np5"]
 [ext_resource type="PackedScene" uid="uid://b35ynbllk8tt" path="res://Levels/Decor/spike.tscn" id="16_wv3s0"]
-[ext_resource type="Script" path="res://Menu/pause_menu.gd" id="17_yhaha"]
-[ext_resource type="PackedScene" uid="uid://binofp81smmie" path="res://Menu/pause_menu.tscn" id="18_0t081"]
+[ext_resource type="Script" path="res://Menu/pause_menu.gd" id="17_6l2o0"]
+[ext_resource type="PackedScene" uid="uid://r6xm031pxux5" path="res://Menu/pause_menu.tscn" id="18_d0prl"]
+[ext_resource type="PackedScene" uid="uid://cchqc6egsixpb" path="res://Util/GUI/info_box.tscn" id="18_ywr08"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
 texture = ExtResource("1_3ogad")
@@ -827,9 +827,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_o61by")
 sources/1 = SubResource("TileSetAtlasSource_6o58p")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqjii"]
-size = Vector2(3072, 693)
-
 [node name="LevelTest" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -907,23 +904,12 @@ position = Vector2(1200, 469)
 
 [node name="Player" type="Node2D" parent="."]
 
-[node name="Spawnpoint" parent="Player" instance=ExtResource("5_kftlj")]
-
 [node name="Player" parent="Player" instance=ExtResource("6_81u84")]
-position = Vector2(112, 256)
+position = Vector2(67, 263)
 
 [node name="BG" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("7_gi3sl")]
-
-[node name="Boundaries" type="Node2D" parent="."]
-visible = false
-
-[node name="Area2D" type="Area2D" parent="Boundaries"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Area2D"]
-position = Vector2(1536, 330.5)
-shape = SubResource("RectangleShape2D_qqjii")
 
 [node name="Flags" type="Node2D" parent="."]
 visible = false
@@ -951,17 +937,8 @@ position = Vector2(2744, 320)
 [node name="Decor" type="Node2D" parent="."]
 position = Vector2(303, 271)
 
-[node name="WaterTop2" parent="Decor" instance=ExtResource("14_kewqa")]
-position = Vector2(857, 249)
-
-[node name="WaterTop3" parent="Decor" instance=ExtResource("14_kewqa")]
-position = Vector2(953, 249)
-
 [node name="Ship" parent="Decor" instance=ExtResource("15_s8dwb")]
-position = Vector2(-255, 25)
-
-[node name="WaterTop" parent="Decor" instance=ExtResource("14_kewqa")]
-position = Vector2(-255, 41)
+position = Vector2(-255, 17)
 
 [node name="palm_top" parent="Decor" instance=ExtResource("13_1y6yr")]
 position = Vector2(0, 1)
@@ -993,6 +970,21 @@ position = Vector2(897, 225)
 
 [node name="Goal" parent="Decor" instance=ExtResource("8_c0qhe")]
 position = Vector2(2657, -71)
+
+[node name="water_top_a2d" parent="Decor" instance=ExtResource("16_58np5")]
+position = Vector2(-255, 33)
+
+[node name="water_top_a2d2" parent="Decor" instance=ExtResource("16_58np5")]
+position = Vector2(857, 257)
+
+[node name="water_top_a2d3" parent="Decor" instance=ExtResource("16_58np5")]
+position = Vector2(953, 257)
+
+[node name="InfoBox" parent="Decor" instance=ExtResource("18_ywr08")]
+offset_left = -215.0
+offset_top = -45.0
+offset_right = -215.0
+offset_bottom = -45.0
 
 [node name="Spikes" type="Node2D" parent="."]
 position = Vector2(303, 271)
@@ -1054,10 +1046,8 @@ position = Vector2(1761, 17)
 [node name="spike19" parent="Spikes" instance=ExtResource("16_wv3s0")]
 position = Vector2(1793, 17)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("17_yhaha")
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+script = ExtResource("17_6l2o0")
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("18_0t081")]
+[node name="PauseMenu" parent="PauseMenu" instance=ExtResource("18_d0prl")]
 visible = false
-
-[connection signal="body_exited" from="Boundaries/Area2D" to="Player/Spawnpoint" method="_on_area_2d_body_exited"]

@@ -165,7 +165,6 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_0edph"]
 resource_name = "Dead"
-length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -453,4 +452,6 @@ zoom = Vector2(2.2, 2.2)
 limit_left = 0
 limit_top = 0
 limit_bottom = 648
+drag_vertical_offset = -0.4
 editor_draw_limits = true
+editor_draw_drag_margin = true

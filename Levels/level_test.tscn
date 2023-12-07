@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bc4o2bnrw8yym" path="res://Collectibles/key.tscn" id="10_aw8ye"]
 [ext_resource type="PackedScene" uid="uid://dj7ev3ussmm8c" path="res://Collectibles/chest.tscn" id="11_j5a5r"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="12_exlds"]
-[ext_resource type="PackedScene" uid="uid://binofp81smmie" path="res://Menu/pause_menu.tscn" id="13_t7cmp"]
+[ext_resource type="PackedScene" uid="uid://r6xm031pxux5" path="res://Menu/pause_menu.tscn" id="13_t7cmp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
 texture = ExtResource("1_6yy86")
@@ -732,7 +732,7 @@ sources/0 = SubResource("TileSetAtlasSource_o61by")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qqjii"]
 size = Vector2(1136, 669)
 
-[node name="LevelTest" type="Node2D"]
+[node name="LevelTest2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_si5ba")
@@ -778,7 +778,6 @@ position = Vector2(264, 384)
 [node name="Area2D" type="Area2D" parent="Boundaries"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Area2D"]
-visible = false
 position = Vector2(576, 342.5)
 shape = SubResource("RectangleShape2D_qqjii")
 
@@ -798,10 +797,12 @@ scale = Vector2(2.5, 2.5)
 transform = Transform2D(2.5, 0, 0, 2.5, 25, 0)
 
 [node name="Health" parent="UI" instance=ExtResource("8_11s5r")]
+visible = false
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="Coincount" parent="UI" instance=ExtResource("9_lye6h")]
+visible = false
 offset_left = -16.4
 offset_top = 16.0
 offset_right = -16.4

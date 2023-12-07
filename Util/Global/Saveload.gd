@@ -6,8 +6,6 @@ const SAVE_PATH = "res://savedata.bin"
 func saveGame():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	var data: Dictionary = {
-		"playerHealth": Game.playerHealth,
-		"playerGold": Game.playerGold,
 		"progress": Game.progress,
 	}
 	var jstr = JSON.stringify(data)
@@ -19,6 +17,4 @@ func loadGame():
 		if not file.eof_reached():
 			var current_line = JSON.parse_string(file.get_line())
 			if current_line:
-				Game.playerHealth = current_line["playerHealth"]
-				Game.playerGold = current_line["playerGold"]
 				Game.progress = current_line["progress"]

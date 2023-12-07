@@ -1,0 +1,178 @@
+[gd_scene load_steps=20 format=3 uid="uid://bcj1emdq4derf"]
+
+[ext_resource type="Script" path="res://Menu/deathscreen.gd" id="1_ylbb7"]
+[ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="2_nxp5r"]
+[ext_resource type="Texture2D" uid="uid://dn1k26cxji03" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/3.png" id="3_rbgc4"]
+[ext_resource type="Texture2D" uid="uid://3gndj7v7ysjs" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/8.png" id="4_yg38e"]
+[ext_resource type="Texture2D" uid="uid://dbf1o6vtn6d40" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/19.png" id="5_uk05g"]
+[ext_resource type="Texture2D" uid="uid://d4e0e04gttnk5" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/6.png" id="6_w3c50"]
+[ext_resource type="Texture2D" uid="uid://chtlgk23hshrh" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/9.png" id="8_kcapb"]
+[ext_resource type="Texture2D" uid="uid://c83ejtwghgnyd" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/14.png" id="8_vaaht"]
+[ext_resource type="Texture2D" uid="uid://beuplwvenc12o" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Button/2.png" id="10_umx2y"]
+[ext_resource type="Texture2D" uid="uid://c1268pooqji5a" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Button/4.png" id="11_jhhto"]
+[ext_resource type="FontFile" uid="uid://bw63qkekcs8jy" path="res://Assets/Font/NotJamOldStyle14.ttf" id="12_8h011"]
+[ext_resource type="Texture2D" uid="uid://dgh2qkkjm08wm" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 01.png" id="13_bcsk5"]
+[ext_resource type="Texture2D" uid="uid://ci2xoqakon0vx" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="14_2av5n"]
+[ext_resource type="Texture2D" uid="uid://byrw2bcec4rrk" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="15_rojjb"]
+[ext_resource type="Texture2D" uid="uid://dr1b4rxdscwlj" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="16_y8dcy"]
+[ext_resource type="Texture2D" uid="uid://cx58ysqgsnw2l" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="17_bi38j"]
+[ext_resource type="Texture2D" uid="uid://jwv4l66yecrk" path="res://Assets/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="18_q5vva"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_xlfr7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_svtmi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_bcsk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2av5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rojjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_y8dcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bi38j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q5vva")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="FinishScreen" type="CanvasLayer"]
+process_mode = 3
+process_physics_priority = 1
+script = ExtResource("1_ylbb7")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_nxp5r")]
+
+[node name="BG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.572549, 0.415686, 0.262745, 0.356863)
+
+[node name="Board" type="Sprite2D" parent="BG"]
+position = Vector2(580, 312)
+scale = Vector2(4.1875, 3.6875)
+texture = ExtResource("3_rbgc4")
+
+[node name="Letters" type="Sprite2D" parent="BG"]
+position = Vector2(100, -56)
+
+[node name="1" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(659.115, 233)
+scale = Vector2(6.223, 6)
+texture = ExtResource("4_yg38e")
+
+[node name="21" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(587.115, 233)
+scale = Vector2(6.223, 6)
+texture = ExtResource("5_uk05g")
+
+[node name="19" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(299.115, 233)
+scale = Vector2(6.223, 6)
+texture = ExtResource("6_w3c50")
+
+[node name="5" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(371.115, 233)
+scale = Vector2(6.223, 6)
+texture = ExtResource("8_kcapb")
+
+[node name="6" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(443.115, 233)
+scale = Vector2(6.223, 6)
+texture = ExtResource("8_vaaht")
+
+[node name="4" type="Sprite2D" parent="BG/Letters"]
+position = Vector2(515.115, 233)
+scale = Vector2(6.223, 6)
+texture = ExtResource("8_kcapb")
+
+[node name="Buttons" type="Sprite2D" parent="BG"]
+position = Vector2(0, -56)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/Buttons"]
+position = Vector2(448, 480)
+scale = Vector2(4.57143, 4.57143)
+texture = ExtResource("10_umx2y")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BG/Buttons"]
+position = Vector2(512, 480)
+scale = Vector2(4.57143, 4.57143)
+texture = ExtResource("11_jhhto")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BG/Buttons"]
+position = Vector2(640, 480)
+scale = Vector2(4.57143, 4.57143)
+texture = ExtResource("10_umx2y")
+
+[node name="Sprite2D4" type="Sprite2D" parent="BG/Buttons"]
+position = Vector2(704, 480)
+scale = Vector2(4.57143, 4.57143)
+texture = ExtResource("11_jhhto")
+
+[node name="Retry" type="Button" parent="BG/Buttons"]
+offset_left = 416.0
+offset_top = 448.0
+offset_right = 544.0
+offset_bottom = 504.0
+theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("12_8h011")
+theme_override_font_sizes/font_size = 28
+text = "RETRY"
+icon = SubResource("ImageTexture_xlfr7")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Menu" type="Button" parent="BG/Buttons"]
+offset_left = 608.0
+offset_top = 448.0
+offset_right = 736.0
+offset_bottom = 504.0
+theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("12_8h011")
+theme_override_font_sizes/font_size = 28
+text = "NEXT"
+icon = SubResource("ImageTexture_xlfr7")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Dead_animation" type="AnimatedSprite2D" parent="BG"]
+position = Vector2(576, 352)
+scale = Vector2(3.05, 3.05)
+sprite_frames = SubResource("SpriteFrames_svtmi")
+animation = &"Run"
+autoplay = "Run"
+
+[node name="Label" type="Label" parent="BG"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 232.0
+offset_right = 604.0
+offset_bottom = 264.0
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(1, 0.87451, 0.709804, 1)
+theme_override_fonts/font = ExtResource("12_8h011")
+theme_override_font_sizes/font_size = 28
+text = "POINTS:"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="BG/Buttons/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="BG/Buttons/Menu" to="." method="_on_menu_pressed"]
