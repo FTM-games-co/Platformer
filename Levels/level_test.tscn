@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bue3sl7buf7rn" path="res://Enemy/crabby.tscn" id="6_uyb60"]
 [ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="8_11s5r"]
 [ext_resource type="PackedScene" uid="uid://bqwyso1nrno4" path="res://Util/GUI/counter.tscn" id="9_lye6h"]
+[ext_resource type="PackedScene" uid="uid://bgu4g6770bgm6" path="res://Enemy/cannon.tscn" id="10_svf7c"]
+[ext_resource type="Script" path="res://Levels/Cannonball.gd" id="11_rp074"]
 [ext_resource type="PackedScene" uid="uid://bc4o2bnrw8yym" path="res://Collectibles/key.tscn" id="10_aw8ye"]
 [ext_resource type="PackedScene" uid="uid://dj7ev3ussmm8c" path="res://Collectibles/chest.tscn" id="11_j5a5r"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="12_exlds"]
@@ -815,4 +817,16 @@ script = ExtResource("12_exlds")
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("13_t7cmp")]
 visible = false
 
+[node name="Cannon" parent="." instance=ExtResource("10_svf7c")]
+position = Vector2(618, 326)
+
+[node name="Cannonball" type="Node2D" parent="."]
+script = ExtResource("11_rp074")
+
+[node name="Timer" type="Timer" parent="Cannonball"]
+process_callback = 0
+wait_time = 1.25
+autostart = true
+
 [connection signal="body_exited" from="Boundaries/Area2D" to="Player/Spawnpoint" method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Cannonball/Timer" to="Cannonball" method="_on_timer_timeout"]
