@@ -6,24 +6,12 @@ signal cball_shot(cball_scene, location)
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
-var state = "idle"
+var state
 
 func _ready():
-	get_node("AnimatedSprite2D").play("Idle")
+	state = "fire"
 
 func _physics_process(delta):
 	match state:
-		"idle":
-			get_node("AnimatedSprite2D").play("Idle")
-			
 		"fire":
 			get_node("AnimatedSprite2D").play("Fire")
-			
-func _on_cannon_range_body_entered(body):
-	if body.name == "Player":
-		print("tulta")
-		state = "fire"
-		
-func _on_cannon_range_body_exited(body):
-	if body.name == "Player":
-		state = "idle"

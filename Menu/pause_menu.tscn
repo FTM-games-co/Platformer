@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dqvxvl707uabk" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/2.png" id="9_m4fi3"]
 [ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="9_pqg4b"]
 [ext_resource type="Texture2D" uid="uid://dt1fr8v04nh4v" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="10_aep75"]
-[ext_resource type="FontFile" path="res://Assets/Font/ARCADECLASSIC.TTF" id="11_gjj8p"]
+[ext_resource type="FontFile" uid="uid://co3kmbuws5vc8" path="res://Assets/Font/ARCADECLASSIC.TTF" id="11_gjj8p"]
 [ext_resource type="Texture2D" uid="uid://ftdsp7upl1yd" path="res://Assets/Treasure Hunters/GUI.png" id="12_upeg8"]
 [ext_resource type="Texture2D" uid="uid://ceuxgycnvhyop" path="res://Assets/Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/01.png" id="14_b6mcy"]
 [ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="15_oa4om"]
@@ -300,7 +300,6 @@ offset_left = -7.2
 offset_top = 44.8
 offset_right = 22.8
 offset_bottom = 67.8
-theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxTexture_34sq7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_a6u7n")
 text = "⚙️"

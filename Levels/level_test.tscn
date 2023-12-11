@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b2ml1j5vsyfue"]
+[gd_scene load_steps=19 format=3 uid="uid://b2ml1j5vsyfue"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_6yy86"]
 [ext_resource type="PackedScene" uid="uid://cvlrkqf0a28dd" path="res://Util/GUI/spawnpoint.tscn" id="2_h4pc0"]
@@ -9,12 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://bue3sl7buf7rn" path="res://Enemy/crabby.tscn" id="6_uyb60"]
 [ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="8_11s5r"]
 [ext_resource type="PackedScene" uid="uid://bqwyso1nrno4" path="res://Util/GUI/counter.tscn" id="9_lye6h"]
-[ext_resource type="PackedScene" uid="uid://bgu4g6770bgm6" path="res://Enemy/cannon.tscn" id="10_svf7c"]
-[ext_resource type="Script" path="res://Levels/Cannonball.gd" id="11_rp074"]
 [ext_resource type="PackedScene" uid="uid://bc4o2bnrw8yym" path="res://Collectibles/key.tscn" id="10_aw8ye"]
+[ext_resource type="PackedScene" uid="uid://mexlox2kvgeu" path="res://Enemy/cannon.tscn" id="10_svf7c"]
 [ext_resource type="PackedScene" uid="uid://dj7ev3ussmm8c" path="res://Collectibles/chest.tscn" id="11_j5a5r"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="12_exlds"]
 [ext_resource type="PackedScene" uid="uid://r6xm031pxux5" path="res://Menu/pause_menu.tscn" id="13_t7cmp"]
+[ext_resource type="PackedScene" uid="uid://bq8ag145a4cyw" path="res://Enemy/cannonball.tscn" id="15_f88or"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
 texture = ExtResource("1_6yy86")
@@ -820,13 +820,6 @@ visible = false
 [node name="Cannon" parent="." instance=ExtResource("10_svf7c")]
 position = Vector2(618, 326)
 
-[node name="Cannonball" type="Node2D" parent="."]
-script = ExtResource("11_rp074")
-
-[node name="Timer" type="Timer" parent="Cannonball"]
-process_callback = 0
-wait_time = 1.25
-autostart = true
+[node name="Cannonball" parent="." instance=ExtResource("15_f88or")]
 
 [connection signal="body_exited" from="Boundaries/Area2D" to="Player/Spawnpoint" method="_on_area_2d_body_exited"]
-[connection signal="timeout" from="Cannonball/Timer" to="Cannonball" method="_on_timer_timeout"]

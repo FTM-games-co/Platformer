@@ -58,4 +58,4 @@ func _on_player_death_body_entered(body):
 func _on_player_attack_body_entered(body):
 	if body.name == "Player":
 		state = "attack"
-		Game.playerHealth -= 1
+		Game.player_damage(1)

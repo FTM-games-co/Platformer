@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://bcj1emdq4derf"]
 
-[ext_resource type="Script" path="res://Menu/deathscreen.gd" id="1_ylbb7"]
+[ext_resource type="Script" path="res://Menu/finish_screen.gd" id="1_kv4or"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="2_nxp5r"]
 [ext_resource type="Texture2D" uid="uid://dn1k26cxji03" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/3.png" id="3_rbgc4"]
 [ext_resource type="Texture2D" uid="uid://3gndj7v7ysjs" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/8.png" id="4_yg38e"]
@@ -49,7 +49,7 @@ animations = [{
 [node name="FinishScreen" type="CanvasLayer"]
 process_mode = 3
 process_physics_priority = 1
-script = ExtResource("1_ylbb7")
+script = ExtResource("1_kv4or")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_nxp5r")]
 
@@ -138,7 +138,7 @@ icon = SubResource("ImageTexture_xlfr7")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Menu" type="Button" parent="BG/Buttons"]
+[node name="Next" type="Button" parent="BG/Buttons"]
 offset_left = 608.0
 offset_top = 448.0
 offset_right = 736.0
@@ -175,4 +175,4 @@ text = "POINTS:"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="BG/Buttons/Retry" to="." method="_on_retry_pressed"]
-[connection signal="pressed" from="BG/Buttons/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="BG/Buttons/Next" to="." method="_on_next_pressed"]
