@@ -8,21 +8,24 @@ var deathmusic = DeathMusic
 func _ready():
 	pass
 
-func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Menu/Level_selection/level_select.tscn")
-	clickeffect.play()
-
-func _on_menu_pressed():
-	get_tree().change_scene_to_file("res://Menu/options.tscn")
-	clickeffect.play()
-
-func _on_quit_pressed():
-	get_tree().quit()
-	clickeffect.play()
-
 func _on_music_toggled(button_pressed):
 	if button_pressed:
 		backgroundmusic.play()
 	else:
 		backgroundmusic.stop()
 		deathmusic.stop()
+
+
+func _on_play_button_pressed():
+	get_tree().change_scene_to_file("res://Menu/Level_selection/level_select.tscn")
+	clickeffect.play()
+
+
+func _on_menu_button_pressed():
+	get_tree().change_scene_to_file("res://Menu/options.tscn")
+	clickeffect.play()
+
+
+func _on_quit_button_pressed():
+	get_tree().quit()
+	clickeffect.play()

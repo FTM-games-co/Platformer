@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://0c7ux4r04dv5"]
+[gd_scene load_steps=12 format=3 uid="uid://bebyuigswd3bg"]
 
 [ext_resource type="Script" path="res://Enemy/cball.gd" id="1_wrvks"]
 [ext_resource type="Texture2D" uid="uid://bdv1mhuawwada" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Explosion/1.png" id="2_oj4g0"]

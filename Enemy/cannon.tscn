@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bgu4g6770bgm6"]
+[gd_scene load_steps=20 format=3 uid="uid://di7kc36nkrqic"]
 
 [ext_resource type="Script" path="res://Enemy/cannon.gd" id="1_elmoc"]
 [ext_resource type="Texture2D" uid="uid://dlvcqmkw6ce3m" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Destroyed/1.png" id="2_i1flr"]
