@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bcj1emdq4derf"]
+[gd_scene load_steps=20 format=3 uid="uid://br0arrgjf1bgu"]
 
 [ext_resource type="Script" path="res://Menu/deathscreen.gd" id="1_ylbb7"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="2_nxp5r"]
