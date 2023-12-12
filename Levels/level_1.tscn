@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bmj3m68lejk5d"]
+[gd_scene load_steps=22 format=3 uid="uid://bmj3m68lejk5d"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_3ogad"]
 [ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="2_6vgvn"]
@@ -18,8 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://r6xm031pxux5" path="res://Menu/pause_menu.tscn" id="18_d0prl"]
 [ext_resource type="PackedScene" uid="uid://bq8ag145a4cyw" path="res://Enemy/cannonball.tscn" id="18_dct5s"]
 [ext_resource type="PackedScene" uid="uid://cchqc6egsixpb" path="res://Util/GUI/info_box.tscn" id="18_ywr08"]
-
-[sub_resource type="GDScript" id="GDScript_rbn4p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
 texture = ExtResource("1_3ogad")
@@ -832,7 +830,6 @@ sources/0 = SubResource("TileSetAtlasSource_o61by")
 sources/1 = SubResource("TileSetAtlasSource_6o58p")
 
 [node name="Level1" type="Node2D"]
-script = SubResource("GDScript_rbn4p")
 
 [node name="TileMap" type="TileMap" parent="."]
 top_level = true

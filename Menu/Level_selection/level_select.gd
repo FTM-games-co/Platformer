@@ -34,6 +34,7 @@ func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		if current_level.next_scene_path and Game.progress >= current_index :
 			get_tree().change_scene_to_file(current_level.next_scene_path)
+			Game.save_scene(current_level.next_scene_path)
 		else:
 			return
 			
