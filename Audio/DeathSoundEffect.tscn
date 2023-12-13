@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://6yoltvmcs7qj"]
+
+[ext_resource type="AudioStream" uid="uid://c0ao403bb61n" path="res://Audio/kuolema.wav" id="1_k2tri"]
+[ext_resource type="Script" path="res://Audio/DeathSoundEffect.gd" id="2_kc43n"]
+
+[node name="DeathSoundEffect" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_k2tri")
+volume_db = -15.0
+max_distance = 15000.0
+bus = &"SFX"
+script = ExtResource("2_kc43n")

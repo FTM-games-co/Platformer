@@ -25,74 +25,64 @@ script = ExtResource("1_tiqfd")
 
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("2_hwkx0")]
 
-[node name="Music" type="CheckButton" parent="."]
-modulate = Color(1, 0.27451, 0.196078, 1)
-offset_left = 20.0
-offset_top = 30.0
-offset_right = 276.0
-offset_bottom = 67.0
-theme_override_fonts/font = ExtResource("7_etkwv")
-theme_override_font_sizes/font_size = 28
-button_pressed = true
-text = "Music ON/OFF"
-
 [node name="Board" type="Sprite2D" parent="."]
 position = Vector2(608, 322)
 scale = Vector2(5, 5)
 texture = ExtResource("3_uleuv")
 
 [node name="Buttons" type="Sprite2D" parent="."]
+position = Vector2(5, -25)
 
 [node name="Play1" type="Sprite2D" parent="Buttons"]
-position = Vector2(560, 260)
+position = Vector2(560, 265)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("4_kndp2")
 
 [node name="Menu1" type="Sprite2D" parent="Buttons"]
-position = Vector2(560, 375)
+position = Vector2(560, 370)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("4_kndp2")
 
 [node name="Quit1" type="Sprite2D" parent="Buttons"]
-position = Vector2(560, 490)
+position = Vector2(560, 480)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("4_kndp2")
 
 [node name="Play2" type="Sprite2D" parent="Buttons"]
-position = Vector2(680, 260)
+position = Vector2(680, 265)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("5_dcsd7")
 
 [node name="Menu2" type="Sprite2D" parent="Buttons"]
-position = Vector2(680, 375)
+position = Vector2(680, 370)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("5_dcsd7")
 
 [node name="Quit2" type="Sprite2D" parent="Buttons"]
-position = Vector2(680, 490)
+position = Vector2(680, 480)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("5_dcsd7")
 
 [node name="Play3" type="Sprite2D" parent="Buttons"]
-position = Vector2(620, 260)
+position = Vector2(620, 265)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("6_tomxj")
 
 [node name="Menu3" type="Sprite2D" parent="Buttons"]
-position = Vector2(620, 375)
+position = Vector2(620, 370)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("6_tomxj")
 
 [node name="Quit3" type="Sprite2D" parent="Buttons"]
-position = Vector2(620, 490)
+position = Vector2(620, 480)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("6_tomxj")
 
 [node name="PlayButton" type="Button" parent="Buttons"]
 offset_left = 557.0
-offset_top = 227.0
+offset_top = 232.0
 offset_right = 685.0
-offset_bottom = 283.0
+offset_bottom = 288.0
 theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -101,26 +91,27 @@ theme_override_fonts/font = ExtResource("7_etkwv")
 theme_override_font_sizes/font_size = 28
 text = "PLAY"
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="MenuButton" type="Button" parent="Buttons"]
 offset_left = 557.0
-offset_top = 343.0
-offset_right = 685.0
-offset_bottom = 399.0
+offset_top = 338.0
+offset_right = 687.0
+offset_bottom = 394.0
 theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("7_etkwv")
 theme_override_font_sizes/font_size = 28
-text = "MENU"
+text = "OPTIONS"
 flat = true
 
 [node name="QuitButton" type="Button" parent="Buttons"]
 offset_left = 557.0
-offset_top = 457.0
+offset_top = 447.0
 offset_right = 685.0
-offset_bottom = 513.0
+offset_bottom = 503.0
 theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -199,7 +190,6 @@ position = Vector2(775, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("14_2lefm")
 
-[connection signal="toggled" from="Music" to="." method="_on_music_toggled"]
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Buttons/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_quit_button_pressed"]
