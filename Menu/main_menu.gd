@@ -13,7 +13,6 @@ func _on_music_toggled(button_pressed):
 		backgroundmusic.play()
 	else:
 		backgroundmusic.stop()
-		deathmusic.stop()
 
 
 func _on_play_button_pressed():
