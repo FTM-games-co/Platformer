@@ -155,24 +155,11 @@ flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Dead_animation" type="AnimatedSprite2D" parent="BG"]
-position = Vector2(576, 352)
+position = Vector2(576, 320)
 scale = Vector2(3.05, 3.05)
 sprite_frames = SubResource("SpriteFrames_svtmi")
 animation = &"Run"
 autoplay = "Run"
-
-[node name="Label" type="Label" parent="BG"]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 232.0
-offset_right = 604.0
-offset_bottom = 264.0
-scale = Vector2(1.5, 1.5)
-theme_override_colors/font_color = Color(1, 0.87451, 0.709804, 1)
-theme_override_fonts/font = ExtResource("12_8h011")
-theme_override_font_sizes/font_size = 28
-text = "POINTS:"
-horizontal_alignment = 1
 
 [connection signal="pressed" from="BG/Buttons/Retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="BG/Buttons/Next" to="." method="_on_next_pressed"]

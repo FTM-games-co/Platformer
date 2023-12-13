@@ -34,9 +34,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_y3enc")
 }],
-"loop": true,
+"loop": false,
 "name": &"Explosion",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -55,9 +55,10 @@ script = ExtResource("1_wrvks")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vxiuk")
-animation = &"Idle"
+animation = &"Explosion"
 autoplay = "Idle"
-frame_progress = 0.727861
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)

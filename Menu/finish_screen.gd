@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-
 func _on_retry_pressed():
 	Game.switch_to_previous_scene()
 	
