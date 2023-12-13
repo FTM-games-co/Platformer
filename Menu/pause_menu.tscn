@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://r6xm031pxux5"]
+[gd_scene load_steps=24 format=3 uid="uid://va2wpyk1hy60"]
 
 [ext_resource type="Texture2D" uid="uid://bixx3mtw33gac" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/16.png" id="1_hoggl"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="1_mhotb"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dqvxvl707uabk" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/2.png" id="9_m4fi3"]
 [ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="9_pqg4b"]
 [ext_resource type="Texture2D" uid="uid://dt1fr8v04nh4v" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="10_aep75"]
-[ext_resource type="FontFile" path="res://Assets/Font/ARCADECLASSIC.TTF" id="11_gjj8p"]
+[ext_resource type="FontFile" uid="uid://co3kmbuws5vc8" path="res://Assets/Font/ARCADECLASSIC.TTF" id="11_gjj8p"]
 [ext_resource type="Texture2D" uid="uid://ftdsp7upl1yd" path="res://Assets/Treasure Hunters/GUI.png" id="12_upeg8"]
 [ext_resource type="Texture2D" uid="uid://ceuxgycnvhyop" path="res://Assets/Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/01.png" id="14_b6mcy"]
 [ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="15_oa4om"]
@@ -64,31 +64,37 @@ rotation = 0.00174533
 scale = Vector2(1.1, 1.1)
 
 [node name="16" type="Sprite2D" parent="BG/Letters"]
+modulate = Color(1, 0.54902, 1, 1)
 position = Vector2(277.57, 106)
 scale = Vector2(6.223, 6)
 texture = ExtResource("1_hoggl")
 
 [node name="1" type="Sprite2D" parent="BG/Letters"]
+modulate = Color(1, 0.54902, 1, 1)
 position = Vector2(364.57, 106)
 scale = Vector2(6.223, 6)
 texture = ExtResource("2_7tget")
 
 [node name="21" type="Sprite2D" parent="BG/Letters"]
+modulate = Color(1, 0.54902, 1, 1)
 position = Vector2(451.57, 107)
 scale = Vector2(6.223, 6)
 texture = ExtResource("3_d0oy4")
 
 [node name="19" type="Sprite2D" parent="BG/Letters"]
+modulate = Color(1, 0.54902, 1, 1)
 position = Vector2(539.569, 106)
 scale = Vector2(6.223, 6)
 texture = ExtResource("4_5h3e0")
 
 [node name="5" type="Sprite2D" parent="BG/Letters"]
+modulate = Color(1, 0.54902, 1, 1)
 position = Vector2(627.569, 106.091)
 scale = Vector2(6.223, 6)
 texture = ExtResource("5_uq4ww")
 
 [node name="4" type="Sprite2D" parent="BG/Letters"]
+modulate = Color(1, 0.54902, 1, 1)
 position = Vector2(714.57, 106.182)
 scale = Vector2(6.223, 6)
 texture = ExtResource("6_6psi4")
@@ -103,7 +109,7 @@ texture = ExtResource("9_m4fi3")
 modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(591.5, 504.25)
 scale = Vector2(6.96875, 6.89063)
-skew = -0.0349066
+skew = -0.0174533
 texture = ExtResource("10_aep75")
 
 [node name="MASTER" parent="BG" instance=ExtResource("9_pqg4b")]

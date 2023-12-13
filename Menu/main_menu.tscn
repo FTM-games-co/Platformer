@@ -26,12 +26,13 @@ script = ExtResource("1_tiqfd")
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("2_hwkx0")]
 
 [node name="Music" type="CheckButton" parent="."]
-modulate = Color(0.137255, 0.568627, 1, 1)
-offset_left = 19.0
-offset_top = 16.0
-offset_right = 172.0
-offset_bottom = 48.0
-theme_override_font_sizes/font_size = 20
+modulate = Color(1, 0.27451, 0.196078, 1)
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 276.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("7_etkwv")
+theme_override_font_sizes/font_size = 28
 button_pressed = true
 text = "Music ON/OFF"
 

@@ -1,90 +1,148 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm271wxgpb38j"]
+[gd_scene load_steps=7 format=3 uid="uid://cm271wxgpb38j"]
 
 [ext_resource type="Script" path="res://Menu/Options.gd" id="1_ila0t"]
-[ext_resource type="PackedScene" path="res://volume_slider.tscn" id="2_7ux3e"]
+[ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="2_7ux3e"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="3_uciyw"]
+[ext_resource type="FontFile" uid="uid://bw63qkekcs8jy" path="res://Assets/Font/NotJamOldStyle14.ttf" id="4_t3fjo"]
+[ext_resource type="Texture2D" uid="uid://dt1fr8v04nh4v" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="4_t7tdm"]
+[ext_resource type="FontFile" uid="uid://co3kmbuws5vc8" path="res://Assets/Font/ARCADECLASSIC.TTF" id="6_cp1wn"]
 
 [node name="Options" type="Node2D"]
 script = ExtResource("1_ila0t")
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 350.0
-offset_top = 50.0
-offset_right = 801.0
-offset_bottom = 200.0
-text = "Copyright © [2023] [FTM]. All Rights Reserved."
-
-[node name="Button" type="Button" parent="."]
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 215.0
-offset_bottom = 115.0
-text = "Back To Main Menu"
-
-[node name="Label2" type="Label" parent="."]
-modulate = Color(0.658824, 0.239216, 0.592157, 0.921569)
-offset_left = 350.0
-offset_top = 92.0
-offset_right = 801.0
-offset_bottom = 242.0
-theme_override_font_sizes/font_size = 21
-text = "MOVING = ←↑→↓
-JUMPING = SPACEBAR"
-
-[node name="Label3" type="Label" parent="."]
-modulate = Color(0.137255, 0.568627, 1, 1)
-offset_left = 21.0
-offset_top = 154.0
-offset_right = 472.0
-offset_bottom = 304.0
-theme_override_font_sizes/font_size = 21
-text = "MASTER 🔈"
-
-[node name="MASTER" parent="." instance=ExtResource("2_7ux3e")]
-modulate = Color(0, 0, 0, 0.705882)
-offset_left = 21.0
-offset_top = 177.0
-offset_right = 289.0
-offset_bottom = 224.0
-bus_name = "Master"
-
-[node name="Label4" type="Label" parent="."]
-modulate = Color(0.137255, 0.568627, 1, 1)
-offset_left = 22.0
-offset_top = 247.0
-offset_right = 473.0
-offset_bottom = 397.0
-theme_override_font_sizes/font_size = 21
-text = "SFX 🔈"
-
-[node name="SFX" parent="." instance=ExtResource("2_7ux3e")]
-modulate = Color(0, 0, 0, 0.705882)
-offset_left = 20.0
-offset_top = 271.0
-offset_right = 288.0
-offset_bottom = 318.0
-bus_name = "SFX"
-
-[node name="Label5" type="Label" parent="."]
-modulate = Color(0.137255, 0.568627, 1, 1)
-offset_left = 23.0
-offset_top = 352.0
-offset_right = 474.0
-offset_bottom = 502.0
-theme_override_font_sizes/font_size = 21
-text = "MUSIC 🔈"
-
-[node name="MUSIC" parent="." instance=ExtResource("2_7ux3e")]
-modulate = Color(0, 0, 0, 0.705882)
-offset_left = 22.0
-offset_top = 374.0
-offset_right = 290.0
-offset_bottom = 421.0
-bus_name = "MUSIC"
+offset_left = 354.0
+offset_top = 44.0
+offset_right = 849.0
+offset_bottom = 96.0
+text = "Created by Leevi Järvinen, Veikka Kursula & Joona Hautaniemi.
+#21SPO #OAMK #FTMGROUP"
 
 [node name="BG" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("3_uciyw")]
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="MenuButton" type="Button" parent="."]
+modulate = Color(1, 0.27451, 0.196078, 1)
+offset_left = 25.0
+offset_top = 30.0
+offset_right = 123.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.955221, 0.879509, 0.751987, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("4_t3fjo")
+theme_override_font_sizes/font_size = 28
+text = "Back"
+flat = true
+
+[node name="Kanban2" type="Sprite2D" parent="."]
+modulate = Color(1, 0.27451, 0.196078, 0.196078)
+position = Vector2(159.5, 194)
+scale = Vector2(8.65625, 7.25)
+texture = ExtResource("4_t7tdm")
+
+[node name="MASTER2" parent="." instance=ExtResource("2_7ux3e")]
+modulate = Color(0, 0, 0, 0.705882)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 38.4998
+offset_top = 119.25
+offset_right = 206.5
+offset_bottom = 150.25
+grow_horizontal = 2
+grow_vertical = 2
+bus_name = "Master"
+
+[node name="Label6" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 38.4998
+offset_top = 93.2501
+offset_right = 154.5
+offset_bottom = 126.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_cp1wn")
+theme_override_font_sizes/font_size = 24
+text = "MASTER"
+
+[node name="Label7" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.4998
+offset_top = 159.75
+offset_right = 155.5
+offset_bottom = 192.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_cp1wn")
+theme_override_font_sizes/font_size = 24
+text = "SFX"
+
+[node name="SFX2" parent="." instance=ExtResource("2_7ux3e")]
+modulate = Color(0, 0, 0, 0.705882)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 38.4998
+offset_top = 183.75
+offset_right = 207.5
+offset_bottom = 218.75
+grow_horizontal = 2
+grow_vertical = 2
+bus_name = "SFX"
+
+[node name="MUSIC2" parent="." instance=ExtResource("2_7ux3e")]
+modulate = Color(0, 0, 0, 0.705882)
+offset_left = 38.4998
+offset_top = 254.25
+offset_right = 209.5
+offset_bottom = 294.25
+bus_name = "MUSIC"
+
+[node name="Label8" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.4998
+offset_top = 232.75
+offset_right = 155.5
+offset_bottom = 265.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_cp1wn")
+theme_override_font_sizes/font_size = 24
+text = "MUSIC"
+
+[node name="Fullscreen" type="CheckButton" parent="."]
+modulate = Color(0.392157, 0.588235, 1, 1)
+offset_left = 349.0
+offset_top = 100.0
+offset_right = 667.0
+offset_bottom = 137.0
+theme_override_fonts/font = ExtResource("4_t3fjo")
+theme_override_font_sizes/font_size = 28
+action_mode = 0
+text = "Fullscreen ON/OFF"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="toggled" from="Fullscreen" to="." method="_on_fullscreen_toggled"]

@@ -4,6 +4,7 @@ class_name LevelSelect
 @onready var current_level: LevelIcon = $LevelIcon
 var current_index: int = 0
 var move_tween: Tween
+var clickeffect = ClickEffect
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,13 +31,19 @@ func _input(event):
 		current_index = int(current_level.level_name)
 		tween_icon()
 
-
 	if event.is_action_pressed("ui_accept"):
 		if current_level.next_scene_path and Game.progress >= current_index :
 			get_tree().change_scene_to_file(current_level.next_scene_path)
 		else:
 			return
 			
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
+			
 func tween_icon():
 	move_tween = get_tree().create_tween()
 	move_tween.tween_property($PlayerIcon, "global_position", current_level.global_position, 0.6).set_trans(Tween.TRANS_SINE)
+
+func _on_menu_button_pressed():
+	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
+	clickeffect.play()
