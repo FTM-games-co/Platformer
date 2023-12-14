@@ -14,6 +14,6 @@ func _on_fullscreen_toggled(button_pressed):
 
 func _on_music_toggled(button_pressed):
 	if button_pressed:
-		backgroundmusic.volume_db = -15
-	else:
 		backgroundmusic.volume_db = -80
+	else:
+		backgroundmusic.volume_db = -10
