@@ -12,3 +12,4 @@ func _on_body_entered(body):
 		print("Keys: ", Game.playerKeys)
 		await get_node("AnimationPlayer").animation_finished
 		self.queue_free()
+		coineffect.play()

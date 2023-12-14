@@ -6,7 +6,7 @@
 [node name="JumpEffect" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_k5jhw")
 volume_db = -7.0
-max_distance = 15000.0
+max_distance = 50000.0
 panning_strength = 0.5
 bus = &"SFX"
 script = ExtResource("2_xg6m4")

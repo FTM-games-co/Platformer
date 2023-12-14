@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cm271wxgpb38j"]
 
 [ext_resource type="Script" path="res://Menu/Options.gd" id="1_ila0t"]
-[ext_resource type="PackedScene" path="res://volume_slider.tscn" id="2_7ux3e"]
+[ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="2_7ux3e"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="3_uciyw"]
 [ext_resource type="FontFile" uid="uid://bw63qkekcs8jy" path="res://Assets/Font/NotJamOldStyle14.ttf" id="4_t3fjo"]
 [ext_resource type="Texture2D" uid="uid://dt1fr8v04nh4v" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="4_t7tdm"]

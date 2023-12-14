@@ -313,6 +313,7 @@ texture = ExtResource("10_aep75")
 
 [node name="Fullscreen" type="CheckButton" parent="BG"]
 modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 745.0
 offset_top = 224.0
 offset_right = 926.0
