@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bebyuigswd3bg"]
+[gd_scene load_steps=12 format=3 uid="uid://cts58kp0mnrif"]
 
 [ext_resource type="Script" path="res://Enemy/cball.gd" id="1_wrvks"]
 [ext_resource type="Texture2D" uid="uid://bdv1mhuawwada" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Cannon/Cannon Ball Explosion/1.png" id="2_oj4g0"]
@@ -34,9 +34,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_y3enc")
 }],
-"loop": true,
+"loop": false,
 "name": &"Explosion",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -48,18 +48,20 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mt5nj"]
-radius = 2.0
+radius = 7.0
 
 [node name="Cball" type="Area2D"]
 script = ExtResource("1_wrvks")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vxiuk")
-animation = &"Idle"
+animation = &"Explosion"
 autoplay = "Idle"
-frame_progress = 0.727861
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_mt5nj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

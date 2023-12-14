@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bmj3m68lejk5d"]
+[gd_scene load_steps=22 format=3 uid="uid://bmj3m68lejk5d"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_3ogad"]
 [ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="2_6vgvn"]
@@ -14,7 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://cy4n8dbn38ui" path="res://Levels/Decor/water_top_a_2d.tscn" id="16_58np5"]
 [ext_resource type="PackedScene" uid="uid://b35ynbllk8tt" path="res://Levels/Decor/spike.tscn" id="16_wv3s0"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="17_6l2o0"]
+[ext_resource type="PackedScene" uid="uid://mexlox2kvgeu" path="res://Enemy/cannon.tscn" id="17_5836m"]
 [ext_resource type="PackedScene" uid="uid://r6xm031pxux5" path="res://Menu/pause_menu.tscn" id="18_d0prl"]
+[ext_resource type="PackedScene" uid="uid://bq8ag145a4cyw" path="res://Enemy/cannonball.tscn" id="18_dct5s"]
 [ext_resource type="PackedScene" uid="uid://cchqc6egsixpb" path="res://Util/GUI/info_box.tscn" id="18_ywr08"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o61by"]
@@ -827,10 +829,11 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_o61by")
 sources/1 = SubResource("TileSetAtlasSource_6o58p")
 
-[node name="LevelTest" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 top_level = true
+z_index = 1
 tile_set = SubResource("TileSet_si5ba")
 format = 2
 layer_0/name = "Level"
@@ -867,7 +870,7 @@ position = Vector2(2336, 352)
 position = Vector2(2624, 352)
 
 [node name="Coin15" parent="Collectibles" instance=ExtResource("2_6vgvn")]
-position = Vector2(2848, 320)
+position = Vector2(2788, 324)
 
 [node name="Coin16" parent="Collectibles" instance=ExtResource("2_6vgvn")]
 position = Vector2(2216, 320)
@@ -900,41 +903,19 @@ position = Vector2(656, 192)
 position = Vector2(1208, 64)
 
 [node name="Key" parent="Collectibles" instance=ExtResource("4_84xti")]
-position = Vector2(1200, 469)
-
-[node name="Player" type="Node2D" parent="."]
-
-[node name="Player" parent="Player" instance=ExtResource("6_81u84")]
-position = Vector2(67, 263)
+position = Vector2(1200, 466)
 
 [node name="BG" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("7_gi3sl")]
 
 [node name="Flags" type="Node2D" parent="."]
-visible = false
 
 [node name="Goal" parent="Flags" instance=ExtResource("8_c0qhe")]
-position = Vector2(1048, 354)
-
-[node name="Enemy" type="Node2D" parent="."]
-
-[node name="Crabby" parent="Enemy" instance=ExtResource("9_e1tyb")]
-position = Vector2(616, 192)
-
-[node name="Crabby2" parent="Enemy" instance=ExtResource("9_e1tyb")]
-position = Vector2(1600, 232)
-
-[node name="Crabby3" parent="Enemy" instance=ExtResource("9_e1tyb")]
-position = Vector2(1448, 232)
-
-[node name="Crabby4" parent="Enemy" instance=ExtResource("9_e1tyb")]
-position = Vector2(2480, 320)
-
-[node name="Crabby5" parent="Enemy" instance=ExtResource("9_e1tyb")]
-position = Vector2(2744, 320)
+position = Vector2(2960, 200)
 
 [node name="Decor" type="Node2D" parent="."]
+top_level = true
 position = Vector2(303, 271)
 
 [node name="Ship" parent="Decor" instance=ExtResource("15_s8dwb")]
@@ -967,9 +948,6 @@ position = Vector2(2513, 17)
 
 [node name="PalmTop3" parent="Decor" instance=ExtResource("13_1y6yr")]
 position = Vector2(897, 225)
-
-[node name="Goal" parent="Decor" instance=ExtResource("8_c0qhe")]
-position = Vector2(2657, -71)
 
 [node name="water_top_a2d" parent="Decor" instance=ExtResource("16_58np5")]
 position = Vector2(-255, 33)
@@ -1051,3 +1029,28 @@ script = ExtResource("17_6l2o0")
 
 [node name="PauseMenu" parent="PauseMenu" instance=ExtResource("18_d0prl")]
 visible = false
+
+[node name="Enemy" type="Node2D" parent="."]
+top_level = true
+
+[node name="Crabby" parent="Enemy" instance=ExtResource("9_e1tyb")]
+position = Vector2(616, 192)
+
+[node name="Crabby2" parent="Enemy" instance=ExtResource("9_e1tyb")]
+position = Vector2(1600, 232)
+
+[node name="Crabby3" parent="Enemy" instance=ExtResource("9_e1tyb")]
+position = Vector2(1448, 232)
+
+[node name="Crabby4" parent="Enemy" instance=ExtResource("9_e1tyb")]
+position = Vector2(2480, 320)
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource("6_81u84")]
+position = Vector2(67, 263)
+
+[node name="Cannonball" parent="." instance=ExtResource("18_dct5s")]
+
+[node name="Cannon" parent="." instance=ExtResource("17_5836m")]
+position = Vector2(2847, 323)

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq8ag145a4cyw"]
+
+[ext_resource type="Script" path="res://Levels/Cannonball.gd" id="1_rtn0v"]
+
+[node name="Cannonball" type="Node2D"]
+script = ExtResource("1_rtn0v")
