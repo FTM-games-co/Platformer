@@ -1,0 +1,101 @@
+[gd_scene load_steps=17 format=3 uid="uid://cugom4ymf3wyp"]
+
+[ext_resource type="Texture2D" uid="uid://dsrk1wjixc663" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/1.png" id="1_218nv"]
+[ext_resource type="Script" path="res://Enemy/sea_shell.gd" id="1_wnk0r"]
+[ext_resource type="Texture2D" uid="uid://nwuf0f08ia5q" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/2.png" id="2_m3fnx"]
+[ext_resource type="Texture2D" uid="uid://lgr8toerc13r" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/3.png" id="3_g17bi"]
+[ext_resource type="Texture2D" uid="uid://bjynqtn0rrntq" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/4.png" id="4_xlb5e"]
+[ext_resource type="Texture2D" uid="uid://dj8joer540v7q" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/5.png" id="5_etifq"]
+[ext_resource type="Texture2D" uid="uid://csjow0mgc0f62" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Bite/6.png" id="6_i7t5d"]
+[ext_resource type="Texture2D" uid="uid://c3n55d73p3ql3" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Idle/1.png" id="7_px5xb"]
+[ext_resource type="Texture2D" uid="uid://ck8lg00kciamg" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/2.png" id="9_w7l26"]
+[ext_resource type="Texture2D" uid="uid://df3qrbe0r5v7n" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/3.png" id="10_4hn47"]
+[ext_resource type="Texture2D" uid="uid://cme2hfyy1prew" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/4.png" id="11_omy3m"]
+[ext_resource type="Texture2D" uid="uid://cyujgi51drtg7" path="res://Assets/Treasure Hunters/Shooter Traps/Sprites/Seashell/Seashell Opening/5.png" id="12_jkm8f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3i6u"]
+size = Vector2(31, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wa67i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_218nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m3fnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g17bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xlb5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_etifq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i7t5d")
+}],
+"loop": true,
+"name": &"Bite",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_px5xb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_w7l26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4hn47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_omy3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jkm8f")
+}],
+"loop": true,
+"name": &"Opening",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jj1ca"]
+radius = 70.406
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gppet"]
+size = Vector2(38, 26)
+
+[node name="SeaShell" type="CharacterBody2D"]
+script = ExtResource("1_wnk0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 8.5)
+shape = SubResource("RectangleShape2D_e3i6u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wa67i")
+animation = &"Opening"
+autoplay = "Idle"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("CircleShape2D_jj1ca")
+
+[node name="PlayerAttack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAttack"]
+position = Vector2(2, 7)
+shape = SubResource("RectangleShape2D_gppet")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerAttack" to="." method="_on_player_attack_body_entered"]
