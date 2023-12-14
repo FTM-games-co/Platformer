@@ -2,6 +2,9 @@ extends Area2D
 
 @onready var anim = get_node("AnimatedSprite2D")
 
+func _ready():
+	$CollisionShape2D.disabled = false
+
 func _on_body_entered(body):
 	if body.name == "Player" and Game.chest and $CollisionShape2D.disabled == false:
 		anim.play("Set")
@@ -15,8 +18,11 @@ func _on_body_entered(body):
 			"res://Levels/level_2.tscn":
 				print("you completed level two")
 				Game.progress = 3
+			"res://Levels/level_3.tscn":
+				print("you completed level two")
+				Game.progress = 4
 			_:
-				print(Game.prev_scene)
+				print("couldnt find next level progress not saved")
 		
 		Saveload.saveGame()
 		Game.player_reset()

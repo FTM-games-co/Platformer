@@ -1,7 +1,5 @@
 extends Node
 
-var l1score = 0
-
 var playerHealth = 5
 var playerGold = 0
 var playerKeys = 0
