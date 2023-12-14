@@ -27,7 +27,10 @@ func _on_resume_pressed() -> void:
 	print("resumed")
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
+	_is_paused = false
+	clickeffect.play()
+	print("back at main menu")
 
 func _on_pause_pressed():
 	var uicanvas = find_child("UI_canvas", true, false)

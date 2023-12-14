@@ -239,7 +239,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_u0y7k")
 theme_override_styles/hover = SubResource("StyleBoxTexture_eofp7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ays16")
-text = "Quit"
+text = "Menu"
 
 [node name="Kanban3" type="Sprite2D" parent="BG"]
 modulate = Color(1, 1, 1, 0.823529)
