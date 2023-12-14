@@ -1,90 +1,259 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm271wxgpb38j"]
+[gd_scene load_steps=18 format=3 uid="uid://cm271wxgpb38j"]
 
 [ext_resource type="Script" path="res://Menu/Options.gd" id="1_ila0t"]
 [ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="2_7ux3e"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="3_uciyw"]
+[ext_resource type="FontFile" uid="uid://bw63qkekcs8jy" path="res://Assets/Font/NotJamOldStyle14.ttf" id="4_t3fjo"]
+[ext_resource type="Texture2D" uid="uid://dt1fr8v04nh4v" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="4_t7tdm"]
+[ext_resource type="FontFile" uid="uid://co3kmbuws5vc8" path="res://Assets/Font/ARCADECLASSIC.TTF" id="6_cp1wn"]
+[ext_resource type="Texture2D" uid="uid://dgjoufh1eo1g" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/7.png" id="7_5mma7"]
+[ext_resource type="Texture2D" uid="uid://ctc6tct45rf8n" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/1.png" id="8_dmov0"]
+[ext_resource type="Texture2D" uid="uid://cx2bxi064yf3k" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/18.png" id="9_bi6xi"]
+[ext_resource type="Texture2D" uid="uid://g511o0glkva3" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/25.png" id="10_nb1ge"]
+[ext_resource type="Texture2D" uid="uid://dr2xfb6fani11" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/4.png" id="11_ijtry"]
+[ext_resource type="Texture2D" uid="uid://dlra7dfwbc2cp" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/22.png" id="12_1pfit"]
+[ext_resource type="Texture2D" uid="uid://diygjg2uiak35" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/5.png" id="13_y0xcr"]
+[ext_resource type="Texture2D" uid="uid://c83ejtwghgnyd" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/14.png" id="14_a6jt7"]
+[ext_resource type="Texture2D" uid="uid://bnxebp5w6sv8x" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/20.png" id="15_kd3m4"]
+[ext_resource type="Texture2D" uid="uid://b0dap7kg35he7" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/21.png" id="16_3jmoh"]
+[ext_resource type="Texture2D" uid="uid://bd8cx4mfpq4ql" path="res://Assets/Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Big/01.png" id="17_e5xmt"]
 
 [node name="Options" type="Node2D"]
 script = ExtResource("1_ila0t")
 
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_uciyw")]
+
 [node name="Label" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 350.0
-offset_top = 50.0
-offset_right = 801.0
-offset_bottom = 200.0
-text = "Copyright © [2023] [FTM]. All Rights Reserved."
+offset_left = 354.0
+offset_top = 27.0
+offset_right = 849.0
+offset_bottom = 79.0
+size_flags_stretch_ratio = 0.0
+text = "Created by Leevi Järvinen, Veikka Kursula & Joona Hautaniemi.
+#OAMK #FTMGROUP"
+horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 215.0
-offset_bottom = 115.0
-text = "Back To Main Menu"
+[node name="Kanban2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.823529)
+position = Vector2(129.5, 163.5)
+scale = Vector2(6.84375, 8.15625)
+texture = ExtResource("4_t7tdm")
 
-[node name="Label2" type="Label" parent="."]
-modulate = Color(0.658824, 0.239216, 0.592157, 0.921569)
-offset_left = 350.0
-offset_top = 92.0
-offset_right = 801.0
-offset_bottom = 242.0
-theme_override_font_sizes/font_size = 21
-text = "MOVING = ←↑→↓
-JUMPING = SPACEBAR"
-
-[node name="Label3" type="Label" parent="."]
-modulate = Color(0.137255, 0.568627, 1, 1)
-offset_left = 21.0
-offset_top = 154.0
-offset_right = 472.0
-offset_bottom = 304.0
-theme_override_font_sizes/font_size = 21
-text = "MASTER 🔈"
-
-[node name="MASTER" parent="." instance=ExtResource("2_7ux3e")]
+[node name="MASTER2" parent="." instance=ExtResource("2_7ux3e")]
 modulate = Color(0, 0, 0, 0.705882)
-offset_left = 21.0
-offset_top = 177.0
-offset_right = 289.0
-offset_bottom = 224.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 37.4998
+offset_top = 115.25
+offset_right = 205.5
+offset_bottom = 146.25
+grow_horizontal = 2
+grow_vertical = 2
 bus_name = "Master"
 
-[node name="Label4" type="Label" parent="."]
-modulate = Color(0.137255, 0.568627, 1, 1)
-offset_left = 22.0
-offset_top = 247.0
-offset_right = 473.0
-offset_bottom = 397.0
-theme_override_font_sizes/font_size = 21
-text = "SFX 🔈"
+[node name="Label6" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 37.4998
+offset_top = 89.25
+offset_right = 153.5
+offset_bottom = 122.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_cp1wn")
+theme_override_font_sizes/font_size = 24
+text = "MASTER"
 
-[node name="SFX" parent="." instance=ExtResource("2_7ux3e")]
+[node name="Label7" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 38.4998
+offset_top = 155.75
+offset_right = 154.5
+offset_bottom = 188.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_cp1wn")
+theme_override_font_sizes/font_size = 24
+text = "SFX"
+
+[node name="SFX2" parent="." instance=ExtResource("2_7ux3e")]
 modulate = Color(0, 0, 0, 0.705882)
-offset_left = 20.0
-offset_top = 271.0
-offset_right = 288.0
-offset_bottom = 318.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 37.4998
+offset_top = 179.75
+offset_right = 206.5
+offset_bottom = 214.75
+grow_horizontal = 2
+grow_vertical = 2
 bus_name = "SFX"
 
-[node name="Label5" type="Label" parent="."]
-modulate = Color(0.137255, 0.568627, 1, 1)
-offset_left = 23.0
-offset_top = 352.0
-offset_right = 474.0
-offset_bottom = 502.0
-theme_override_font_sizes/font_size = 21
-text = "MUSIC 🔈"
-
-[node name="MUSIC" parent="." instance=ExtResource("2_7ux3e")]
+[node name="MUSIC2" parent="." instance=ExtResource("2_7ux3e")]
 modulate = Color(0, 0, 0, 0.705882)
-offset_left = 22.0
-offset_top = 374.0
-offset_right = 290.0
-offset_bottom = 421.0
+offset_left = 37.4998
+offset_top = 250.25
+offset_right = 208.5
+offset_bottom = 290.25
 bus_name = "MUSIC"
 
-[node name="BG" type="Node2D" parent="."]
+[node name="Label8" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 38.4998
+offset_top = 228.75
+offset_right = 154.5
+offset_bottom = 261.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_cp1wn")
+theme_override_font_sizes/font_size = 24
+text = "MUSIC"
 
-[node name="ParallaxBackground" parent="BG" instance=ExtResource("3_uciyw")]
+[node name="Fullscreen" type="CheckButton" parent="."]
+modulate = Color(0, 0.705882, 0, 1)
+offset_left = 349.0
+offset_top = 100.0
+offset_right = 667.0
+offset_bottom = 137.0
+theme_override_fonts/font = ExtResource("4_t3fjo")
+theme_override_font_sizes/font_size = 28
+action_mode = 0
+text = "Fullscreen ON/OFF"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Label9" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.5
+offset_top = 40.0
+offset_right = 126.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_cp1wn")
+theme_override_font_sizes/font_size = 24
+text = "VOLUMES"
+
+[node name="Letters" type="Sprite2D" parent="."]
+position = Vector2(-10, 20)
+
+[node name="G" type="Sprite2D" parent="Letters"]
+position = Vector2(670, 210)
+scale = Vector2(5, 5)
+texture = ExtResource("7_5mma7")
+
+[node name="A" type="Sprite2D" parent="Letters"]
+position = Vector2(735, 210)
+scale = Vector2(5, 5)
+texture = ExtResource("8_dmov0")
+
+[node name="R" type="Sprite2D" parent="Letters"]
+position = Vector2(800, 210)
+scale = Vector2(5, 5)
+texture = ExtResource("9_bi6xi")
+
+[node name="Y" type="Sprite2D" parent="Letters"]
+position = Vector2(865, 210)
+scale = Vector2(5, 5)
+texture = ExtResource("10_nb1ge")
+
+[node name="Small letters" type="Sprite2D" parent="Letters"]
+position = Vector2(145, 102)
+
+[node name="a" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(455, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("8_dmov0")
+
+[node name="d" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(495, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("11_ijtry")
+
+[node name="v" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(535, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("12_1pfit")
+
+[node name="e" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(575, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("13_y0xcr")
+
+[node name="n" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(615, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("14_a6jt7")
+
+[node name="t" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(655, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("15_kd3m4")
+
+[node name="u" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(695, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("16_3jmoh")
+
+[node name="r" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(735, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("9_bi6xi")
+
+[node name="e2" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(775, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("13_y0xcr")
+
+[node name="Music" type="CheckButton" parent="."]
+modulate = Color(1, 0.27451, 0.196078, 1)
+offset_left = 349.0
+offset_top = 139.0
+offset_right = 571.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("4_t3fjo")
+theme_override_font_sizes/font_size = 28
+text = "Mute Music"
+
+[node name="01" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(127, 18.5)
+scale = Vector2(1, 0.578125)
+texture = ExtResource("17_e5xmt")
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(1, 0.27451, 0.196078, 1)
+offset_left = 20.0
+offset_top = 350.0
+offset_right = 293.0
+offset_bottom = 378.0
+rotation = -0.0872665
+theme_override_fonts/font = ExtResource("4_t3fjo")
+theme_override_font_sizes/font_size = 24
+text = "- Press esc to go back"
+
+[connection signal="toggled" from="Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="Music" to="." method="_on_music_toggled"]

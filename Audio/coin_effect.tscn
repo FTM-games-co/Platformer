@@ -5,8 +5,9 @@
 
 [node name="CoinEffect" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_l1y6m")
-volume_db = -12.0
+volume_db = -7.0
 pitch_scale = 0.76
 max_distance = 15000.0
+panning_strength = 1.2
 bus = &"SFX"
 script = ExtResource("2_ylytq")

@@ -1,50 +1,195 @@
-[gd_scene load_steps=3 format=3 uid="uid://dspc4ptfb5e4l"]
+[gd_scene load_steps=18 format=3 uid="uid://dspc4ptfb5e4l"]
 
 [ext_resource type="Script" path="res://Menu/main_menu.gd" id="1_tiqfd"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="2_hwkx0"]
+[ext_resource type="Texture2D" uid="uid://dn1k26cxji03" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/3.png" id="3_uleuv"]
+[ext_resource type="Texture2D" uid="uid://beuplwvenc12o" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Button/2.png" id="4_kndp2"]
+[ext_resource type="Texture2D" uid="uid://c1268pooqji5a" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Button/4.png" id="5_dcsd7"]
+[ext_resource type="Texture2D" uid="uid://dcmmj4pqll7hp" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Yellow Button/3.png" id="6_tomxj"]
+[ext_resource type="FontFile" uid="uid://bw63qkekcs8jy" path="res://Assets/Font/NotJamOldStyle14.ttf" id="7_etkwv"]
+[ext_resource type="Texture2D" uid="uid://dgjoufh1eo1g" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/7.png" id="8_3qson"]
+[ext_resource type="Texture2D" uid="uid://ctc6tct45rf8n" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/1.png" id="9_f3k0p"]
+[ext_resource type="Texture2D" uid="uid://cx2bxi064yf3k" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/18.png" id="10_qt1yl"]
+[ext_resource type="Texture2D" uid="uid://g511o0glkva3" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/25.png" id="11_2wnyt"]
+[ext_resource type="Texture2D" uid="uid://dr2xfb6fani11" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/4.png" id="12_m61ss"]
+[ext_resource type="Texture2D" uid="uid://dlra7dfwbc2cp" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/22.png" id="13_isk6h"]
+[ext_resource type="Texture2D" uid="uid://diygjg2uiak35" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/5.png" id="14_2lefm"]
+[ext_resource type="Texture2D" uid="uid://c83ejtwghgnyd" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/14.png" id="15_ju32p"]
+[ext_resource type="Texture2D" uid="uid://bnxebp5w6sv8x" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/20.png" id="16_wbt2o"]
+[ext_resource type="Texture2D" uid="uid://b0dap7kg35he7" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/21.png" id="17_qhf7h"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_tiqfd")
-
-[node name="Play" type="Button" parent="."]
-offset_left = 425.0
-offset_top = 50.0
-offset_right = 725.0
-offset_bottom = 200.0
-size_flags_vertical = 4
-text = "Play"
-
-[node name="Menu" type="Button" parent="."]
-offset_left = 425.0
-offset_top = 250.0
-offset_right = 725.0
-offset_bottom = 400.0
-size_flags_vertical = 4
-text = "Options"
-
-[node name="Quit" type="Button" parent="."]
-offset_left = 425.0
-offset_top = 450.0
-offset_right = 725.0
-offset_bottom = 600.0
-size_flags_vertical = 4
-text = "Quit"
 
 [node name="BG" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("2_hwkx0")]
 
-[node name="Music" type="CheckButton" parent="."]
-modulate = Color(0.137255, 0.568627, 1, 1)
-offset_left = 19.0
-offset_top = 16.0
-offset_right = 172.0
-offset_bottom = 48.0
-theme_override_font_sizes/font_size = 20
-button_pressed = true
-text = "Music ON/OFF"
+[node name="Board" type="Sprite2D" parent="."]
+position = Vector2(608, 322)
+scale = Vector2(5, 5)
+texture = ExtResource("3_uleuv")
 
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
-[connection signal="toggled" from="Music" to="." method="_on_music_toggled"]
+[node name="Buttons" type="Sprite2D" parent="."]
+position = Vector2(5, -25)
+
+[node name="Play1" type="Sprite2D" parent="Buttons"]
+position = Vector2(560, 265)
+scale = Vector2(4.571, 4.571)
+texture = ExtResource("4_kndp2")
+
+[node name="Menu1" type="Sprite2D" parent="Buttons"]
+position = Vector2(560, 370)
+scale = Vector2(4.571, 4.571)
+texture = ExtResource("4_kndp2")
+
+[node name="Quit1" type="Sprite2D" parent="Buttons"]
+position = Vector2(560, 480)
+scale = Vector2(4.571, 4.571)
+texture = ExtResource("4_kndp2")
+
+[node name="Play2" type="Sprite2D" parent="Buttons"]
+position = Vector2(680, 265)
+scale = Vector2(4.571, 4.571)
+texture = ExtResource("5_dcsd7")
+
+[node name="Menu2" type="Sprite2D" parent="Buttons"]
+position = Vector2(680, 370)
+scale = Vector2(4.571, 4.571)
+texture = ExtResource("5_dcsd7")
+
+[node name="Quit2" type="Sprite2D" parent="Buttons"]
+position = Vector2(680, 480)
+scale = Vector2(4.571, 4.571)
+texture = ExtResource("5_dcsd7")
+
+[node name="Play3" type="Sprite2D" parent="Buttons"]
+position = Vector2(620, 265)
+scale = Vector2(4.571, 4.571)
+texture = ExtResource("6_tomxj")
+
+[node name="Menu3" type="Sprite2D" parent="Buttons"]
+position = Vector2(620, 370)
+scale = Vector2(4.571, 4.571)
+texture = ExtResource("6_tomxj")
+
+[node name="Quit3" type="Sprite2D" parent="Buttons"]
+position = Vector2(620, 480)
+scale = Vector2(4.571, 4.571)
+texture = ExtResource("6_tomxj")
+
+[node name="PlayButton" type="Button" parent="Buttons"]
+offset_left = 557.0
+offset_top = 232.0
+offset_right = 685.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("7_etkwv")
+theme_override_font_sizes/font_size = 28
+text = "PLAY"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuButton" type="Button" parent="Buttons"]
+offset_left = 557.0
+offset_top = 338.0
+offset_right = 687.0
+offset_bottom = 394.0
+theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("7_etkwv")
+theme_override_font_sizes/font_size = 28
+text = "OPTIONS"
+flat = true
+
+[node name="QuitButton" type="Button" parent="Buttons"]
+offset_left = 557.0
+offset_top = 447.0
+offset_right = 685.0
+offset_bottom = 503.0
+theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("7_etkwv")
+theme_override_font_sizes/font_size = 28
+text = "QUIT"
+flat = true
+
+[node name="Letters" type="Sprite2D" parent="."]
+
+[node name="G" type="Sprite2D" parent="Letters"]
+position = Vector2(525, 108)
+scale = Vector2(5, 5)
+texture = ExtResource("8_3qson")
+
+[node name="A" type="Sprite2D" parent="Letters"]
+position = Vector2(590, 108)
+scale = Vector2(5, 5)
+texture = ExtResource("9_f3k0p")
+
+[node name="R" type="Sprite2D" parent="Letters"]
+position = Vector2(655, 108)
+scale = Vector2(5, 5)
+texture = ExtResource("10_qt1yl")
+
+[node name="Y" type="Sprite2D" parent="Letters"]
+position = Vector2(720, 108)
+scale = Vector2(5, 5)
+texture = ExtResource("11_2wnyt")
+
+[node name="Small letters" type="Sprite2D" parent="Letters"]
+
+[node name="a" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(455, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("9_f3k0p")
+
+[node name="d" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(495, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("12_m61ss")
+
+[node name="v" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(535, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("13_isk6h")
+
+[node name="e" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(575, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("14_2lefm")
+
+[node name="n" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(615, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("15_ju32p")
+
+[node name="t" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(655, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("16_wbt2o")
+
+[node name="u" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(695, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("17_qhf7h")
+
+[node name="r" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(735, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("10_qt1yl")
+
+[node name="e2" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(775, 161)
+scale = Vector2(3, 3)
+texture = ExtResource("14_2lefm")
+
+[connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Buttons/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_quit_button_pressed"]

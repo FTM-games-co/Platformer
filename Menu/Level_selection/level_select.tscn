@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cyixig4k005g2"]
+[gd_scene load_steps=15 format=3 uid="uid://cyixig4k005g2"]
 
 [ext_resource type="PackedScene" uid="uid://bn7ox8ndvvus3" path="res://Menu/Level_selection/level_icon.tscn" id="1_6d3ir"]
 [ext_resource type="Script" path="res://Menu/Level_selection/level_select.gd" id="1_agn08"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://pjtfd3uurxaq" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Orange Paper/7.png" id="8_0d7ii"]
 [ext_resource type="Texture2D" uid="uid://dk7plkh7xhnc2" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Orange Paper/8.png" id="9_ej6p3"]
 [ext_resource type="Texture2D" uid="uid://bifdgc0560q7u" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Orange Paper/9.png" id="10_b1vb1"]
+[ext_resource type="FontFile" uid="uid://bw63qkekcs8jy" path="res://Assets/Font/NotJamOldStyle14.ttf" id="11_g8ft3"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -209,6 +210,18 @@ offset_top = 576.0
 offset_right = 1152.0
 offset_bottom = 768.0
 texture = ExtResource("10_b1vb1")
+
+[node name="Hint" type="Label" parent="BG"]
+modulate = Color(1, 0.27451, 0.196078, 1)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 39.0
+offset_right = 146.0
+offset_bottom = 56.0
+rotation = -0.0872665
+theme_override_fonts/font = ExtResource("11_g8ft3")
+theme_override_font_sizes/font_size = 14
+text = "- Choose your level"
 
 [node name="LevelIcon" parent="." node_paths=PackedStringArray("next_level_right") instance=ExtResource("1_6d3ir")]
 offset_left = 152.0
