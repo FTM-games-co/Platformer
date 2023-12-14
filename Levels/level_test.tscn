@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://b2ml1j5vsyfue"]
+[gd_scene load_steps=20 format=3 uid="uid://b2ml1j5vsyfue"]
 
 [ext_resource type="Texture2D" uid="uid://b3t2m0r3qh4u2" path="res://Assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_6yy86"]
-[ext_resource type="PackedScene" uid="uid://cvlrkqf0a28dd" path="res://Util/GUI/spawnpoint.tscn" id="2_h4pc0"]
+[ext_resource type="PackedScene" path="res://Util/GUI/spawnpoint.tscn" id="2_h4pc0"]
 [ext_resource type="PackedScene" uid="uid://da1dotberd134" path="res://Player/player.tscn" id="3_1aot5"]
 [ext_resource type="PackedScene" uid="uid://bt114hbfgq6dc" path="res://Collectibles/coin.tscn" id="3_flkbm"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="3_gk7tw"]
@@ -9,7 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bue3sl7buf7rn" path="res://Enemy/crabby.tscn" id="6_uyb60"]
 [ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="8_11s5r"]
 [ext_resource type="PackedScene" uid="uid://bqwyso1nrno4" path="res://Util/GUI/counter.tscn" id="9_lye6h"]
-[ext_resource type="PackedScene" uid="uid://bc4o2bnrw8yym" path="res://Collectibles/key.tscn" id="10_aw8ye"]
+[ext_resource type="PackedScene" path="res://Collectibles/key.tscn" id="10_aw8ye"]
+[ext_resource type="PackedScene" uid="uid://cugom4ymf3wyp" path="res://Enemy/sea_shell.tscn" id="10_mfk4t"]
 [ext_resource type="PackedScene" uid="uid://mexlox2kvgeu" path="res://Enemy/cannon.tscn" id="10_svf7c"]
 [ext_resource type="PackedScene" uid="uid://dj7ev3ussmm8c" path="res://Collectibles/chest.tscn" id="11_j5a5r"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="12_exlds"]
@@ -791,7 +792,10 @@ position = Vector2(1048, 354)
 [node name="Enemy" type="Node2D" parent="."]
 
 [node name="Crabby" parent="Enemy" instance=ExtResource("6_uyb60")]
-position = Vector2(802, 355)
+position = Vector2(795, 352)
+
+[node name="SeaShell" parent="Enemy" instance=ExtResource("10_mfk4t")]
+position = Vector2(317, 380)
 
 [node name="UI" type="CanvasLayer" parent="."]
 offset = Vector2(25, 0)
