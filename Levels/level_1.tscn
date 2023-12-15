@@ -922,32 +922,32 @@ position = Vector2(303, 271)
 position = Vector2(-255, 17)
 
 [node name="palm_top" parent="Decor" instance=ExtResource("13_1y6yr")]
-position = Vector2(0, 1)
+position = Vector2(302.5, 272)
 
 [node name="palm_top2" parent="Decor" instance=ExtResource("13_1y6yr")]
-position = Vector2(97, -63)
+position = Vector2(399.5, 208)
 autoplay = ""
 
 [node name="palm_top3" parent="Decor" instance=ExtResource("13_1y6yr")]
-position = Vector2(929, 1)
+position = Vector2(1231.5, 272)
 
 [node name="palm_top4" parent="Decor" instance=ExtResource("13_1y6yr")]
-position = Vector2(865, 113)
+position = Vector2(1167.5, 384)
 
 [node name="PalmTop" parent="Decor" instance=ExtResource("13_1y6yr")]
-position = Vector2(1137, -159)
+position = Vector2(1439.5, 112)
 
 [node name="PalmTop2" parent="Decor" instance=ExtResource("13_1y6yr")]
-position = Vector2(1280, -143)
+position = Vector2(1582.5, 128)
 
 [node name="PalmTop4" parent="Decor" instance=ExtResource("13_1y6yr")]
-position = Vector2(1697, -47)
+position = Vector2(1999.5, 224)
 
 [node name="PalmTop5" parent="Decor" instance=ExtResource("13_1y6yr")]
-position = Vector2(2513, 17)
+position = Vector2(2815.5, 288)
 
 [node name="PalmTop3" parent="Decor" instance=ExtResource("13_1y6yr")]
-position = Vector2(897, 225)
+position = Vector2(1199.5, 496)
 
 [node name="water_top_a2d" parent="Decor" instance=ExtResource("16_58np5")]
 position = Vector2(-255, 33)
