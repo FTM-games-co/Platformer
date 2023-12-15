@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cdqqvt2ekwrxt" path="res://Util/GUI/healthbar.tscn" id="8_11s5r"]
 [ext_resource type="PackedScene" uid="uid://bqwyso1nrno4" path="res://Util/GUI/counter.tscn" id="9_lye6h"]
 [ext_resource type="PackedScene" uid="uid://bc4o2bnrw8yym" path="res://Collectibles/key.tscn" id="10_aw8ye"]
-[ext_resource type="PackedScene" path="res://Enemy/sea_shell.tscn" id="10_mfk4t"]
+[ext_resource type="PackedScene" uid="uid://cugom4ymf3wyp" path="res://Enemy/sea_shell.tscn" id="10_mfk4t"]
 [ext_resource type="PackedScene" uid="uid://mexlox2kvgeu" path="res://Enemy/cannon.tscn" id="10_svf7c"]
 [ext_resource type="PackedScene" uid="uid://dj7ev3ussmm8c" path="res://Collectibles/chest.tscn" id="11_j5a5r"]
 [ext_resource type="Script" path="res://Menu/pause_menu.gd" id="12_exlds"]

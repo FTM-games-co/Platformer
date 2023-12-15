@@ -26,6 +26,7 @@ Saveload="*res://Util/Global/Saveload.gd"
 ClickEffect2="*res://Audio/click_effect2.tscn"
 DeathSoundEffect="*res://Audio/DeathSoundEffect.tscn"
 WinEffect="*res://Audio/WinEffect.tscn"
+KeyEffect="*res://Audio/KeyEffect.tscn"
 
 [display]
 

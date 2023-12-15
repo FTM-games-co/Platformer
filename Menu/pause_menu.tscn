@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://diygjg2uiak35" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/5.png" id="5_uq4ww"]
 [ext_resource type="Texture2D" uid="uid://dr2xfb6fani11" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/4.png" id="6_6psi4"]
 [ext_resource type="Texture2D" uid="uid://dqvxvl707uabk" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/2.png" id="9_m4fi3"]
-[ext_resource type="PackedScene" path="res://volume_slider.tscn" id="9_pqg4b"]
+[ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="9_pqg4b"]
 [ext_resource type="Texture2D" uid="uid://dt1fr8v04nh4v" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="10_aep75"]
 [ext_resource type="FontFile" uid="uid://co3kmbuws5vc8" path="res://Assets/Font/ARCADECLASSIC.TTF" id="11_gjj8p"]
 [ext_resource type="Texture2D" uid="uid://ftdsp7upl1yd" path="res://Assets/Treasure Hunters/GUI.png" id="12_upeg8"]
@@ -210,8 +210,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -39.0
 offset_top = -133.0
-offset_right = 65.0
-offset_bottom = -65.0
+offset_right = 71.0
+offset_bottom = -78.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("11_gjj8p")
@@ -229,10 +229,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.0
+offset_left = -39.0
 offset_top = -54.0
-offset_right = 65.0
-offset_bottom = 9.0
+offset_right = 71.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("11_gjj8p")
