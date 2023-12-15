@@ -5,7 +5,7 @@
 
 [node name="WinEffect" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_i1xnm")
-volume_db = -12.0
+volume_db = -14.0
 max_distance = 50000.0
 bus = &"SFX"
 script = ExtResource("2_eehrg")

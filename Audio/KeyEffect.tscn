@@ -6,4 +6,5 @@
 [node name="KeyEffect" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_tndcy")
 volume_db = -10.0
+bus = &"SFX"
 script = ExtResource("2_kw2uh")
