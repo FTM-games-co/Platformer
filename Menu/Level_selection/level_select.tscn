@@ -247,6 +247,7 @@ offset_top = 112.0
 offset_right = 752.0
 offset_bottom = 176.0
 level_name = "3"
+next_scene_path = "res://Levels/level_3.tscn"
 next_level_left = NodePath("../LevelIcon2")
 next_level_right = NodePath("../LevelIcon4")
 

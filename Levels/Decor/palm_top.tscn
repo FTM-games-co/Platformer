@@ -29,6 +29,7 @@ animations = [{
 size = Vector2(32, 26)
 
 [node name="PalmTop" type="AnimatedSprite2D"]
+top_level = true
 sprite_frames = SubResource("SpriteFrames_opxgv")
 autoplay = "default"
 frame_progress = 0.636316
