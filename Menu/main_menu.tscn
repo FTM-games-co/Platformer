@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dspc4ptfb5e4l"]
+[gd_scene load_steps=30 format=3 uid="uid://dspc4ptfb5e4l"]
 
 [ext_resource type="Script" path="res://Menu/main_menu.gd" id="1_tiqfd"]
 [ext_resource type="PackedScene" uid="uid://m3j3b1thyllb" path="res://Levels/Bg/bg.tscn" id="2_hwkx0"]
@@ -17,6 +17,43 @@
 [ext_resource type="Texture2D" uid="uid://c83ejtwghgnyd" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/14.png" id="15_ju32p"]
 [ext_resource type="Texture2D" uid="uid://bnxebp5w6sv8x" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/20.png" id="16_wbt2o"]
 [ext_resource type="Texture2D" uid="uid://b0dap7kg35he7" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/21.png" id="17_qhf7h"]
+[ext_resource type="Texture2D" uid="uid://d4e0e04gttnk5" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/6.png" id="18_is1fm"]
+[ext_resource type="Texture2D" uid="uid://c2uap7ie2wk3w" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/13.png" id="19_2fpjm"]
+[ext_resource type="Texture2D" uid="uid://db5ijut8yrkjl" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/28.png" id="20_o7iqt"]
+[ext_resource type="Texture2D" uid="uid://b4u2s3rr3rgd2" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/36.png" id="21_kcela"]
+[ext_resource type="Texture2D" uid="uid://tnotw6lhukvl" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/29.png" id="22_qdesu"]
+[ext_resource type="Texture2D" uid="uid://bhmu4g3uue847" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" id="23_wpsje"]
+[ext_resource type="Texture2D" uid="uid://dblloj1s1ohyc" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" id="24_g2ree"]
+[ext_resource type="Texture2D" uid="uid://cwima1l8uut66" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" id="25_brea6"]
+[ext_resource type="Texture2D" uid="uid://c2xuesoifhq4f" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" id="26_uyabe"]
+[ext_resource type="Texture2D" uid="uid://dmg8jpbl47n5t" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" id="27_kmgm4"]
+[ext_resource type="Texture2D" uid="uid://cvskjftjxbo8i" path="res://Assets/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" id="28_0whpd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5sqaw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_wpsje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_g2ree")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_brea6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_uyabe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_kmgm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0whpd")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_tiqfd")
@@ -26,7 +63,7 @@ script = ExtResource("1_tiqfd")
 [node name="ParallaxBackground" parent="BG" instance=ExtResource("2_hwkx0")]
 
 [node name="Board" type="Sprite2D" parent="."]
-position = Vector2(608, 322)
+position = Vector2(575, 322)
 scale = Vector2(5, 5)
 texture = ExtResource("3_uleuv")
 
@@ -34,54 +71,54 @@ texture = ExtResource("3_uleuv")
 position = Vector2(5, -25)
 
 [node name="Play1" type="Sprite2D" parent="Buttons"]
-position = Vector2(560, 265)
+position = Vector2(515, 265)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("4_kndp2")
 
 [node name="Menu1" type="Sprite2D" parent="Buttons"]
-position = Vector2(560, 370)
+position = Vector2(515, 370)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("4_kndp2")
 
 [node name="Quit1" type="Sprite2D" parent="Buttons"]
-position = Vector2(560, 480)
+position = Vector2(515, 480)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("4_kndp2")
 
 [node name="Play2" type="Sprite2D" parent="Buttons"]
-position = Vector2(680, 265)
+position = Vector2(635, 265)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("5_dcsd7")
 
 [node name="Menu2" type="Sprite2D" parent="Buttons"]
-position = Vector2(680, 370)
+position = Vector2(635, 370)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("5_dcsd7")
 
 [node name="Quit2" type="Sprite2D" parent="Buttons"]
-position = Vector2(680, 480)
+position = Vector2(635, 480)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("5_dcsd7")
 
 [node name="Play3" type="Sprite2D" parent="Buttons"]
-position = Vector2(620, 265)
+position = Vector2(575, 265)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("6_tomxj")
 
 [node name="Menu3" type="Sprite2D" parent="Buttons"]
-position = Vector2(620, 370)
+position = Vector2(575, 370)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("6_tomxj")
 
 [node name="Quit3" type="Sprite2D" parent="Buttons"]
-position = Vector2(620, 480)
+position = Vector2(575, 480)
 scale = Vector2(4.571, 4.571)
 texture = ExtResource("6_tomxj")
 
 [node name="PlayButton" type="Button" parent="Buttons"]
-offset_left = 557.0
+offset_left = 515.0
 offset_top = 232.0
-offset_right = 685.0
+offset_right = 643.0
 offset_bottom = 288.0
 theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -94,9 +131,9 @@ flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="MenuButton" type="Button" parent="Buttons"]
-offset_left = 557.0
+offset_left = 515.0
 offset_top = 338.0
-offset_right = 687.0
+offset_right = 645.0
 offset_bottom = 394.0
 theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -108,9 +145,9 @@ text = "OPTIONS"
 flat = true
 
 [node name="QuitButton" type="Button" parent="Buttons"]
-offset_left = 557.0
+offset_left = 515.0
 offset_top = 447.0
-offset_right = 685.0
+offset_right = 643.0
 offset_bottom = 503.0
 theme_override_colors/font_color = Color(1, 0.866667, 0.686275, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -124,71 +161,114 @@ flat = true
 [node name="Letters" type="Sprite2D" parent="."]
 
 [node name="G" type="Sprite2D" parent="Letters"]
-position = Vector2(525, 108)
+position = Vector2(475, 108)
 scale = Vector2(5, 5)
 texture = ExtResource("8_3qson")
 
 [node name="A" type="Sprite2D" parent="Letters"]
-position = Vector2(590, 108)
+position = Vector2(540, 108)
 scale = Vector2(5, 5)
 texture = ExtResource("9_f3k0p")
 
 [node name="R" type="Sprite2D" parent="Letters"]
-position = Vector2(655, 108)
+position = Vector2(605, 108)
 scale = Vector2(5, 5)
 texture = ExtResource("10_qt1yl")
 
 [node name="Y" type="Sprite2D" parent="Letters"]
-position = Vector2(720, 108)
+position = Vector2(670, 108)
 scale = Vector2(5, 5)
 texture = ExtResource("11_2wnyt")
 
 [node name="Small letters" type="Sprite2D" parent="Letters"]
 
 [node name="a" type="Sprite2D" parent="Letters/Small letters"]
-position = Vector2(455, 161)
+position = Vector2(415, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("9_f3k0p")
 
 [node name="d" type="Sprite2D" parent="Letters/Small letters"]
-position = Vector2(495, 161)
+position = Vector2(455, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("12_m61ss")
 
 [node name="v" type="Sprite2D" parent="Letters/Small letters"]
-position = Vector2(535, 161)
+position = Vector2(495, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("13_isk6h")
 
 [node name="e" type="Sprite2D" parent="Letters/Small letters"]
-position = Vector2(575, 161)
+position = Vector2(535, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("14_2lefm")
 
 [node name="n" type="Sprite2D" parent="Letters/Small letters"]
-position = Vector2(615, 161)
+position = Vector2(575, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("15_ju32p")
 
 [node name="t" type="Sprite2D" parent="Letters/Small letters"]
-position = Vector2(655, 161)
+position = Vector2(615, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("16_wbt2o")
 
 [node name="u" type="Sprite2D" parent="Letters/Small letters"]
-position = Vector2(695, 161)
+position = Vector2(655, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("17_qhf7h")
 
 [node name="r" type="Sprite2D" parent="Letters/Small letters"]
-position = Vector2(735, 161)
+position = Vector2(695, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("10_qt1yl")
 
 [node name="e2" type="Sprite2D" parent="Letters/Small letters"]
-position = Vector2(775, 161)
+position = Vector2(735, 161)
 scale = Vector2(3, 3)
 texture = ExtResource("14_2lefm")
+
+[node name="f" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(535, 525)
+scale = Vector2(3, 3)
+texture = ExtResource("18_is1fm")
+
+[node name="t2" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(575, 525)
+scale = Vector2(3, 3)
+texture = ExtResource("16_wbt2o")
+
+[node name="Sprite2D" type="Sprite2D" parent="Letters/Small letters"]
+position = Vector2(615, 525)
+scale = Vector2(3, 3)
+texture = ExtResource("19_2fpjm")
+
+[node name="Nums" type="Sprite2D" parent="."]
+
+[node name="2" type="Sprite2D" parent="Nums"]
+position = Vector2(530, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("20_o7iqt")
+
+[node name="2_" type="Sprite2D" parent="Nums"]
+position = Vector2(590, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("20_o7iqt")
+
+[node name="0" type="Sprite2D" parent="Nums"]
+position = Vector2(560, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("21_kcela")
+
+[node name="3" type="Sprite2D" parent="Nums"]
+position = Vector2(620, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("22_qdesu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(693, 546)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5sqaw")
+animation = &"Run"
 
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Buttons/MenuButton" to="." method="_on_menu_button_pressed"]
