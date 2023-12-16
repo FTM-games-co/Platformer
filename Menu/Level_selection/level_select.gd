@@ -2,6 +2,7 @@ extends Control
 class_name LevelSelect
 
 @onready var current_level: LevelIcon = $LevelIcon
+@onready var label = get_node("CanvasLayer/levelInfo")
 var current_index: int = 0
 var move_tween: Tween
 var clickeffect = ClickEffect
@@ -36,7 +37,7 @@ func _input(event):
 			get_tree().change_scene_to_file(current_level.next_scene_path)
 			Game.save_scene(current_level.next_scene_path)
 		else:
-			return
+			info_visible()
 			
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
@@ -48,3 +49,13 @@ func tween_icon():
 func _on_menu_button_pressed():
 	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
 	clickeffect.play()
+	
+func info_visible():
+	var tween = get_tree().create_tween()
+	tween.tween_property(label, "modulate:a", 1, 0.3)
+	await get_tree().create_timer(2).timeout
+	info_invisible()
+	
+func info_invisible():
+	var tween = get_tree().create_tween()
+	tween.tween_property(label, "modulate:a", 0, 0.3)

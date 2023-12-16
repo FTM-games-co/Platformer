@@ -19,7 +19,7 @@ func _on_body_entered(body):
 				print("you completed level two")
 				Game.progress = 3
 			"res://Levels/level_3.tscn":
-				print("you completed level two")
+				print("you completed level three")
 				Game.progress = 4
 			_:
 				print("couldnt find next level progress not saved")
