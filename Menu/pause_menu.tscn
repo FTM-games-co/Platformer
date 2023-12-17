@@ -240,7 +240,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_u0y7k")
 theme_override_styles/hover = SubResource("StyleBoxTexture_eofp7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ays16")
-text = "Menu"
+text = "MENU"
 
 [node name="Kanban3" type="Sprite2D" parent="BG"]
 modulate = Color(1, 1, 1, 0.823529)
@@ -321,7 +321,7 @@ offset_bottom = 254.0
 theme_override_fonts/font = ExtResource("11_gjj8p")
 theme_override_font_sizes/font_size = 24
 action_mode = 0
-text = "Full screen"
+text = "Fullscreen"
 
 [node name="Quit" type="Button" parent="BG"]
 modulate = Color(0, 1, 1, 1)

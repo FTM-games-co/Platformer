@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://vtodu1jnckol"]
+
+[ext_resource type="AudioStream" uid="uid://dsol3kuu8v3t6" path="res://Audio/damage.mp3" id="1_8tcqn"]
+[ext_resource type="Script" path="res://Audio/HurtEffect.gd" id="2_x706r"]
+
+[node name="HurtEffect" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_8tcqn")
+volume_db = -12.0
+max_distance = 50000.0
+bus = &"SFX"
+script = ExtResource("2_x706r")

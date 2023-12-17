@@ -106,9 +106,9 @@ bus_name = "SFX"
 
 [node name="MUSIC2" parent="." instance=ExtResource("2_7ux3e")]
 modulate = Color(0, 0, 0, 0.705882)
-offset_left = 37.4998
+offset_left = 38.4998
 offset_top = 250.25
-offset_right = 208.5
+offset_right = 209.5
 offset_bottom = 290.25
 bus_name = "MUSIC"
 
@@ -131,9 +131,9 @@ text = "MUSIC"
 
 [node name="Fullscreen" type="CheckButton" parent="."]
 modulate = Color(0, 0.705882, 0, 1)
-offset_left = 349.0
+offset_left = 350.0
 offset_top = 100.0
-offset_right = 667.0
+offset_right = 668.0
 offset_bottom = 137.0
 theme_override_fonts/font = ExtResource("4_t3fjo")
 theme_override_font_sizes/font_size = 28
@@ -148,9 +148,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 38.0
-offset_top = 39.5
+offset_top = 45.5
 offset_right = 162.0
-offset_bottom = 68.5
+offset_bottom = 74.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_cp1wn")
@@ -230,9 +230,9 @@ texture = ExtResource("13_y0xcr")
 
 [node name="Music" type="CheckButton" parent="."]
 modulate = Color(1, 0.27451, 0.196078, 1)
-offset_left = 349.0
+offset_left = 350.0
 offset_top = 139.0
-offset_right = 571.0
+offset_right = 572.0
 offset_bottom = 176.0
 theme_override_fonts/font = ExtResource("4_t3fjo")
 theme_override_font_sizes/font_size = 28
@@ -247,9 +247,9 @@ texture = ExtResource("17_e5xmt")
 [node name="Label2" type="Label" parent="."]
 modulate = Color(1, 0.27451, 0.196078, 1)
 offset_left = 20.0
-offset_top = 425.0
+offset_top = 450.0
 offset_right = 293.0
-offset_bottom = 453.0
+offset_bottom = 478.0
 rotation = -0.0872665
 theme_override_fonts/font = ExtResource("4_t3fjo")
 theme_override_font_sizes/font_size = 24
@@ -272,6 +272,12 @@ theme_override_fonts/font = ExtResource("6_cp1wn")
 theme_override_font_sizes/font_size = 24
 text = "MOVING = ←↑→↓
 JUMPING = SPACEBAR"
+
+[node name="Kanban3" type="Sprite2D" parent="."]
+modulate = Color(1, 0.27451, 0.196078, 0.137255)
+position = Vector2(146, 339.5)
+scale = Vector2(7.84375, 2.53125)
+texture = ExtResource("4_t7tdm")
 
 [connection signal="toggled" from="Fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="toggled" from="Music" to="." method="_on_music_toggled"]

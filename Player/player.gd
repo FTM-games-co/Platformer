@@ -4,7 +4,7 @@ var knockback_cooldown = false
 @export var speed = 250.0
 @export var jump_velocity = -375.0
 @onready var anim = get_node("AnimationPlayer")
-
+var hurteffect = HurtEffect
 var jumpeffect = JumpEffect
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -12,6 +12,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func take_damage_and_knockback():
 	if not knockback_cooldown:
+		hurteffect.play()
 		knockback_cooldown = true
 		Game.player_damage(1)
 		knockback()
