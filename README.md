@@ -9,7 +9,7 @@ The game features levels, collectible coins, enemies, obstacles, treasures, and 
 
 The contributors are Leevi Järvinen (LeeviJarvinen), Joona Hautaniemi (Hakis1), and Veikka Kursula (VeikkaK) from TVT21SPO.
 
-VIDEO: ....
+Demovideo (in Finnish) -> https://youtu.be/zJnR_SYw2_s
 
 ## Contents
 
@@ -58,6 +58,8 @@ VIDEO: ....
 - **Level Selection:** The game has a nice level selector. When you get through a level, it is saved and you can continue from where you left off.
 
 - **Rich World:** The game has details and a good atmosphere created by sounds.
+
+- **Quite a lot more! Go try it.**
 
 ## More
 
