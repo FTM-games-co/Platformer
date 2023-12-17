@@ -6,7 +6,6 @@ var current_index: int = 0
 var move_tween: Tween
 var clickeffect = ClickEffect
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$PlayerIcon.global_position = current_level.global_position
 	

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://kpyxsx7mlhwi"]
+
+[ext_resource type="AudioStream" uid="uid://b7kttmq0idebr" path="res://Audio/avain.wav" id="1_tndcy"]
+[ext_resource type="Script" path="res://Audio/KeyEffect.gd" id="2_kw2uh"]
+
+[node name="KeyEffect" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_tndcy")
+volume_db = -10.0
+bus = &"SFX"
+script = ExtResource("2_kw2uh")

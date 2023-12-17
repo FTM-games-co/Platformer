@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqi1528pcp283"]
 
-[ext_resource type="AudioStream" path="res://Audio/klikki2.mp3" id="1_4ese7"]
+[ext_resource type="AudioStream" uid="uid://k5pv3lv24l4o" path="res://Audio/klikki2.mp3" id="1_4ese7"]
 [ext_resource type="Script" path="res://Audio/click_effect2.gd" id="2_xniik"]
 
 [node name="ClickEffect2" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_4ese7")
-volume_db = -15.0
+volume_db = -17.0
+max_distance = 50000.0
 bus = &"SFX"
 script = ExtResource("2_xniik")

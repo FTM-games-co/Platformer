@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://diygjg2uiak35" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/5.png" id="5_uq4ww"]
 [ext_resource type="Texture2D" uid="uid://dr2xfb6fani11" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Text/4.png" id="6_6psi4"]
 [ext_resource type="Texture2D" uid="uid://dqvxvl707uabk" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/2.png" id="9_m4fi3"]
-[ext_resource type="PackedScene" path="res://volume_slider.tscn" id="9_pqg4b"]
+[ext_resource type="PackedScene" uid="uid://bcb5xrbeu2pai" path="res://volume_slider.tscn" id="9_pqg4b"]
 [ext_resource type="Texture2D" uid="uid://dt1fr8v04nh4v" path="res://Assets/Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="10_aep75"]
 [ext_resource type="FontFile" uid="uid://co3kmbuws5vc8" path="res://Assets/Font/ARCADECLASSIC.TTF" id="11_gjj8p"]
 [ext_resource type="Texture2D" uid="uid://ftdsp7upl1yd" path="res://Assets/Treasure Hunters/GUI.png" id="12_upeg8"]
@@ -94,15 +94,15 @@ texture = ExtResource("6_6psi4")
 
 [node name="Kanban" type="Sprite2D" parent="BG"]
 modulate = Color(1, 1, 0.705882, 1)
-position = Vector2(590, 258)
-scale = Vector2(3.45833, 2.47917)
+position = Vector2(590, 248.5)
+scale = Vector2(3.45833, 2.67709)
 texture = ExtResource("9_m4fi3")
 
 [node name="Kanban2" type="Sprite2D" parent="BG"]
 modulate = Color(1, 1, 1, 0.823529)
 position = Vector2(591.37, 500.534)
 scale = Vector2(6.96875, 6.65821)
-skew = -0.0349066
+skew = -0.0174533
 texture = ExtResource("10_aep75")
 
 [node name="MASTER" parent="BG" instance=ExtResource("9_pqg4b")]
@@ -190,9 +190,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -84.0
+offset_left = -83.0
 offset_top = 216.0
-offset_right = 32.0
+offset_right = 33.0
 offset_bottom = 249.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -209,9 +209,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -39.0
-offset_top = -133.0
-offset_right = 65.0
-offset_bottom = -65.0
+offset_top = -159.0
+offset_right = 71.0
+offset_bottom = -104.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("11_gjj8p")
@@ -221,7 +221,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_l01cw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bva7u")
 text = "Resume"
 
-[node name="Quit" type="Button" parent="BG"]
+[node name="Menu" type="Button" parent="BG"]
 modulate = Color(0, 1, 1, 1)
 layout_mode = 1
 anchors_preset = 8
@@ -229,10 +229,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = -54.0
-offset_right = 65.0
-offset_bottom = 9.0
+offset_left = -39.0
+offset_top = -103.0
+offset_right = 71.0
+offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("11_gjj8p")
@@ -240,11 +240,11 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_u0y7k")
 theme_override_styles/hover = SubResource("StyleBoxTexture_eofp7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ays16")
-text = "Menu"
+text = "MENU"
 
 [node name="Kanban3" type="Sprite2D" parent="BG"]
 modulate = Color(1, 1, 1, 0.823529)
-position = Vector2(858.5, 307.5)
+position = Vector2(858.5, 304.5)
 scale = Vector2(7.46875, 2.34375)
 texture = ExtResource("10_aep75")
 
@@ -257,9 +257,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 176.0
-offset_top = -55.0
+offset_top = -58.0
 offset_right = 393.0
-offset_bottom = 17.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("11_gjj8p")
@@ -307,7 +307,7 @@ text = "⚙️"
 
 [node name="Kanban4" type="Sprite2D" parent="BG"]
 modulate = Color(1, 1, 1, 0.823529)
-position = Vector2(833, 242.75)
+position = Vector2(833, 239.75)
 scale = Vector2(5.875, 1.73438)
 texture = ExtResource("10_aep75")
 
@@ -315,15 +315,37 @@ texture = ExtResource("10_aep75")
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 745.0
-offset_top = 224.0
+offset_top = 221.0
 offset_right = 926.0
-offset_bottom = 257.0
+offset_bottom = 254.0
 theme_override_fonts/font = ExtResource("11_gjj8p")
 theme_override_font_sizes/font_size = 24
 action_mode = 0
-text = "Full screen"
+text = "Fullscreen"
+
+[node name="Quit" type="Button" parent="BG"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -47.0
+offset_right = 71.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_gjj8p")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_u0y7k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_eofp7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ays16")
+text = "QUIT"
 
 [connection signal="pressed" from="BG/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="BG/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="BG/Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="BG/UI_canvas/Pause" to="." method="_on_pause_pressed"]
 [connection signal="toggled" from="BG/Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="BG/Quit" to="." method="_on_quit_pressed"]

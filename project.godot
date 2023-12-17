@@ -23,14 +23,23 @@ JumpEffect="*res://Audio/jump_effect.tscn"
 ClickEffect="*res://Audio/click_effect.tscn"
 Game="*res://Util/Global/Game.gd"
 Saveload="*res://Util/Global/Saveload.gd"
-DeathMusic="*res://Audio/death_music.tscn"
 ClickEffect2="*res://Audio/click_effect2.tscn"
 DeathSoundEffect="*res://Audio/DeathSoundEffect.tscn"
 WinEffect="*res://Audio/WinEffect.tscn"
+KeyEffect="*res://Audio/KeyEffect.tscn"
+HurtEffect="*res://Audio/HurtEffect.tscn"
 
 [display]
 
 window/stretch/mode="viewport"
+
+[input]
+
+M={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":77,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
 
 [rendering]
 
