@@ -76,7 +76,8 @@ Game development was not entirely new to the team; here's the **[previous projec
 ### Assets
 
 - **[Treasure Hunters](https://pixelfrog-assets.itch.io/treasure-hunters)**
-- The sound effects and music were mainly taken from **[Mixkit](https://mixkit.co/)** and **[Pixabay](https://pixabay.com/sound-effects/)** websites.
+- The sound effects were taken from **[Mixkit](https://mixkit.co/)** and **[Pixabay](https://pixabay.com/sound-effects/)** websites.
+- Track Name: **[Boss Time](https://youtu.be/9--lKyEphWY?si=vIlZMdoIPLm-AyKn)** by **[Fesliyan Studios](https://www.fesliyanstudios.com/)**.
 
 ### Development Team
 - **[Veikka Kursula](https://github.com/VeikkaK)**
